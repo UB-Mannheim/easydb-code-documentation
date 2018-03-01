@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>DetailHierarchyListResult</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        DetailHierarchyListResult
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>modules&#47;Detail&#47;DetailHierarchyListResult.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/ResultList.html'>ResultList</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Variables Summary</h2>
+      
+      <h3 class='inherited'>
+        Variable inherited from
+        <a href='../class/ResultList.html'>ResultList</a>
+      </h3>
+      <p class='inherited'>
+        <a href='../class/ResultList.html#__page_size-variable'>__page_size</a>
+        <a href='../class/ResultList.html#__page_sizes-variable'>__page_sizes</a>
+      </p>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#renderStandard-dynamic'>
+        #
+(void)
+<b>renderStandard</b><span>(result_object)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/ResultList.html'>ResultList</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/ResultList.html#getName-dynamic'>#getName</a>
+          <a href='../class/ResultList.html#__getColsAndHeaders-dynamic'>#__getColsAndHeaders</a>
+          <a href='../class/ResultList.html#getAdditionalViewFields-dynamic'>#getAdditionalViewFields</a>
+          <a href='../class/ResultList.html#getObjectFormatNeeded-dynamic'>#getObjectFormatNeeded</a>
+          <a href='../class/ResultList.html#renderStandard-dynamic'>#renderStandard</a>
+          <a href='../class/ResultList.html#filterTopLevel-dynamic'>#filterTopLevel</a>
+          <a href='../class/ResultList.html#getNodesFromData-dynamic'>#getNodesFromData</a>
+          <a href='../class/ResultList.html#addToRequest-dynamic'>#addToRequest</a>
+          <a href='../class/ResultTable.html#initOpts-dynamic'>#initOpts</a>
+          <a href='../class/ResultTable.html#readOpts-dynamic'>#readOpts</a>
+          <a href='../class/ResultTable.html#init-dynamic'>#init</a>
+          <a href='../class/ResultTable.html#getCSSVariants-dynamic'>#getCSSVariants</a>
+          <a href='../class/ResultTable.html#setSearch-dynamic'>#setSearch</a>
+          <a href='../class/ResultTable.html#unsetSearch-dynamic'>#unsetSearch</a>
+          <a href='../class/ResultTable.html#getNavigation-dynamic'>#getNavigation</a>
+          <a href='../class/ResultTable.html#getPageSize-dynamic'>#getPageSize</a>
+          <a href='../class/ResultTable.html#getExcludeFields-dynamic'>#getExcludeFields</a>
+          <a href='../class/ResultTable.html#getViewFields-dynamic'>#getViewFields</a>
+          <a href='../class/ResultTable.html#saveViewDone-dynamic'>#saveViewDone</a>
+          <a href='../class/ResultTable.html#updateView-dynamic'>#updateView</a>
+          <a href='../class/ResultTable.html#initView-dynamic'>#initView</a>
+          <a href='../class/ResultTable.html#setData-dynamic'>#setData</a>
+          <a href='../class/ResultTable.html#getNodesFromDataTree-dynamic'>#getNodesFromDataTree</a>
+          <a href='../class/ResultTable.html#getNodesFromDataFlat-dynamic'>#getNodesFromDataFlat</a>
+          <a href='../class/ResultTable.html#destroy-dynamic'>#destroy</a>
+          <a href='../class/ResultTable.html#getObjectFormatNeededInternal-dynamic'>#getObjectFormatNeededInternal</a>
+          <a href='../class/ResultTable.html#showResult-dynamic'>#showResult</a>
+          <a href='../class/ResultTable.html#__updateDataInNodes-dynamic'>#__updateDataInNodes</a>
+          <a href='../class/ResultTable.html#getMode-dynamic'>#getMode</a>
+          <a href='../class/ResultManagerResult.html#initSelectable-dynamic'>#initSelectable</a>
+          <a href='../class/ResultManagerResult.html#initSelectableCollection-dynamic'>#initSelectableCollection</a>
+          <a href='../class/ResultManagerResult.html#getCollectionSelection-dynamic'>#getCollectionSelection</a>
+          <a href='../class/ResultManagerResult.html#addToResultDiv-dynamic'>#addToResultDiv</a>
+          <a href='../class/ResultManagerResult.html#getResultContainer-dynamic'>#getResultContainer</a>
+          <a href='../class/ResultManagerResult.html#deinitSelectable-dynamic'>#deinitSelectable</a>
+          <a href='../class/ResultManagerResult.html#getViewDataDefault-dynamic'>#getViewDataDefault</a>
+          <a href='../class/SearchManager.html#getSearch-dynamic'>#getSearch</a>
+          <a href='../class/SearchManager.html#emptyRequest-dynamic'>#emptyRequest</a>
+          <a href='../class/SearchManager.html#getObjecttypesForSearch-dynamic'>#getObjecttypesForSearch</a>
+          <a href='../class/SearchManager.html#failResult-dynamic'>#failResult</a>
+          <a href='../class/SearchManager.html#hasUserInput-dynamic'>#hasUserInput</a>
+          <a href='../class/SearchManager.html#objecttypesUpdated-dynamic'>#objecttypesUpdated</a>
+          <a href='../class/SearchManager.html#startSearch-dynamic'>#startSearch</a>
+          <a href='../class/SearchManager.html#getStoreData-dynamic'>#getStoreData</a>
+          <a href='../class/SearchManager.html#getStoreAsUrlData-dynamic'>#getStoreAsUrlData</a>
+          <a href='../class/SearchManager.html#initFromUrlData-dynamic'>#initFromUrlData</a>
+          <a href='../class/SearchManager.html#getCurrentTools-dynamic'>#getCurrentTools</a>
+        </p>
+      </h2>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='renderStandard-dynamic'>
+      #
+(void)
+<b>renderStandard</b><span>(result_object)</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

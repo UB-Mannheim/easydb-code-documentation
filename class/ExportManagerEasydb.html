@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>ExportManagerEasydb</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        ExportManagerEasydb
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>modules&#47;ExportManager&#47;ExportManagerEasydb.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/ExportManagerPlugin.html'>ExportManagerPlugin</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#name-dynamic'>
+        #
+(void)
+<b>name</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#nameLocalized-dynamic'>
+        #
+(void)
+<b>nameLocalized</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderForm-dynamic'>
+        #
+(void)
+<b>renderForm</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#generateFieldsFormData-dynamic'>
+        #
+(void)
+<b>generateFieldsFormData</b><span>(data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__getOriginalKeys-dynamic'>
+        #
+(void)
+<b>__getOriginalKeys</b><span>(cls)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getMapWithoutUnderscoreKeys-dynamic'>
+        #
+(void)
+<b>getMapWithoutUnderscoreKeys</b><span>(map)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__getVersionSaveData-dynamic'>
+        #
+(void)
+<b>__getVersionSaveData</b><span>(cdata)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#generateFieldsFormEAS-dynamic'>
+        #
+(void)
+<b>generateFieldsFormEAS</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getClassFields-dynamic'>
+        #
+(void)
+<b>getClassFields</b><span>(cls, data_changed, for_assets)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      returns fields for class dependent input 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#showFieldSelector-dynamic'>
+        #
+(void)
+<b>showFieldSelector</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getClassFields_image-dynamic'>
+        #
+(void)
+<b>getClassFields_image</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setStateForm-dynamic'>
+        #
+(void)
+<b>setStateForm</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setClassState-dynamic'>
+        #
+(void)
+<b>setClassState</b><span>(version_data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setClassState_image-dynamic'>
+        #
+(void)
+<b>setClassState_image</b><span>(data, show, disable)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getClassFields_video-dynamic'>
+        #
+(void)
+<b>getClassFields_video</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getClassFields_audio-dynamic'>
+        #
+(void)
+<b>getClassFields_audio</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getClassFields_office-dynamic'>
+        #
+(void)
+<b>getClassFields_office</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setClassState_office-dynamic'>
+        #
+(void)
+<b>setClassState_office</b><span>(data, show)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getClassFields_unknown-dynamic'>
+        #
+(void)
+<b>getClassFields_unknown</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#init-dynamic'>
+        #
+(void)
+<b>init</b><span>(opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getFormData-dynamic'>
+        #
+(void)
+<b>getFormData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getExportData-dynamic'>
+        #
+(void)
+<b>getExportData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__findOriginalInVersions-dynamic'>
+        #
+(void)
+<b>__findOriginalInVersions</b><span>(versions)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__getMapFromVersions-dynamic'>
+        #
+(void)
+<b>__getMapFromVersions</b><span>(versions = [])</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__getXSLTs-dynamic'>
+        #
+(void)
+<b>__getXSLTs</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#saveAllowed-dynamic'>
+        #
+(void)
+<b>saveAllowed</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/ExportManagerPlugin.html'>ExportManagerPlugin</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/ExportManagerPlugin.html#init-dynamic'>#init</a>
+          <a href='../class/ExportManagerPlugin.html#name-dynamic'>#name</a>
+          <a href='../class/ExportManagerPlugin.html#nameLocalized-dynamic'>#nameLocalized</a>
+          <a href='../class/ExportManagerPlugin.html#renderForm-dynamic'>#renderForm</a>
+          <a href='../class/ExportManagerPlugin.html#getExportData-dynamic'>#getExportData</a>
+          <a href='../class/ExportManagerPlugin.html#saveAllowed-dynamic'>#saveAllowed</a>
+        </p>
+      </h2>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='name-dynamic'>
+      #
+(void)
+<b>name</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='nameLocalized-dynamic'>
+      #
+(void)
+<b>nameLocalized</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderForm-dynamic'>
+      #
+(void)
+<b>renderForm</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='generateFieldsFormData-dynamic'>
+      #
+(void)
+<b>generateFieldsFormData</b><span>(data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__getOriginalKeys-dynamic'>
+      #
+(void)
+<b>__getOriginalKeys</b><span>(cls)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getMapWithoutUnderscoreKeys-dynamic'>
+      #
+(void)
+<b>getMapWithoutUnderscoreKeys</b><span>(map)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__getVersionSaveData-dynamic'>
+      #
+(void)
+<b>__getVersionSaveData</b><span>(cdata)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='generateFieldsFormEAS-dynamic'>
+      #
+(void)
+<b>generateFieldsFormEAS</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getClassFields-dynamic'>
+      #
+(void)
+<b>getClassFields</b><span>(cls, data_changed, for_assets)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>returns fields for class dependent input</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='showFieldSelector-dynamic'>
+      #
+(void)
+<b>showFieldSelector</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getClassFields_image-dynamic'>
+      #
+(void)
+<b>getClassFields_image</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setStateForm-dynamic'>
+      #
+(void)
+<b>setStateForm</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setClassState-dynamic'>
+      #
+(void)
+<b>setClassState</b><span>(version_data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setClassState_image-dynamic'>
+      #
+(void)
+<b>setClassState_image</b><span>(data, show, disable)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getClassFields_video-dynamic'>
+      #
+(void)
+<b>getClassFields_video</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getClassFields_audio-dynamic'>
+      #
+(void)
+<b>getClassFields_audio</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getClassFields_office-dynamic'>
+      #
+(void)
+<b>getClassFields_office</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setClassState_office-dynamic'>
+      #
+(void)
+<b>setClassState_office</b><span>(data, show)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getClassFields_unknown-dynamic'>
+      #
+(void)
+<b>getClassFields_unknown</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='init-dynamic'>
+      #
+(void)
+<b>init</b><span>(opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getFormData-dynamic'>
+      #
+(void)
+<b>getFormData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getExportData-dynamic'>
+      #
+(void)
+<b>getExportData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__findOriginalInVersions-dynamic'>
+      #
+(void)
+<b>__findOriginalInVersions</b><span>(versions)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__getMapFromVersions-dynamic'>
+      #
+(void)
+<b>__getMapFromVersions</b><span>(versions = [])</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__getXSLTs-dynamic'>
+      #
+(void)
+<b>__getXSLTs</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='saveAllowed-dynamic'>
+      #
+(void)
+<b>saveAllowed</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

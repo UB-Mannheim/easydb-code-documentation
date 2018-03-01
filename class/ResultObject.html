@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>ResultObject</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        ResultObject
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>shared&#47;Result&#47;ResultObject.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            CUI.Dummy
+          </td>
+        </tr>
+      </table>
+      <h2>Direct Known Subclasses</h2>
+      <p class='children'>
+        <a href='../class/ResultObjectDemo.html'>ResultObjectDemo</a>
+        <a href='../class/TemplateObject.html'>TemplateObject</a>
+      </p>
+      <h2>Variables Summary</h2>
+      <dl class='constants'>
+  <dt id='charTextMap-variable'>
+    charTextMap
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>{
+  &quot;comma&quot;: [&quot;, &quot;],
+  &quot;space&quot;: [&quot; &quot;],
+  &quot;colon&quot;: [&quot;: &quot;],
+  &quot;semicolon&quot;: [&quot;; &quot;],
+  &quot;newline&quot;: [&quot;\n&quot;],
+  &quot;brackets&quot;: [&quot;{&quot;, &quot;}&quot;],
+  &quot;round-parentheses&quot;: [&quot;(&quot;, &quot;)&quot;],
+  &quot;square-brackets&quot;: [&quot;[&quot;, &quot;]&quot;],
+  &quot;dash&quot;: [&quot; - &quot;]
+}</code></pre>
+    
+  </dd>
+  <dt id='__formats-variable'>
+    __formats
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>[&quot;&quot;, &quot;short&quot;, &quot;standard&quot;, &quot;long&quot;, &quot;full&quot;]</code></pre>
+    
+  </dd>
+</dl>
+      <h2>Class Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#renderPath-static'>
+        .
+(void)
+<b>renderPath</b><span>(path_els = [], content = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      renders a path separated by path separators path_els is an array of text
+content to false and a span is created, otherwise content is appended directly
+returns path template
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#showCollectionObjectInPopover-static'>
+        .
+(void)
+<b>showCollectionObjectInPopover</b><span>(opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromDb-static'>
+        .
+(void)
+<b>loadFromDb</b><span>(global_object_id)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromData-static'>
+        .
+(void)
+<b>loadFromData</b><span>(data, _format = &quot;long&quot;, present_error = true, best_mask_filter = false, generate_rights = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromGlobalObjectId-static'>
+        .
+(void)
+<b>loadFromGlobalObjectId</b><span>(gid, format, mask = null, best_mask_filter = false, generate_rights = true)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromId-static'>
+        .
+(void)
+<b>loadFromId</b><span>(objecttype, id, format = &quot;standard&quot;, mask_name = null, best_mask_filter = false, generate_rights = true)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#compareFormats-static'>
+        .
+(void)
+<b>compareFormats</b><span>(format1 = &quot;&quot;, format2 = &quot;&quot;)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#setData-dynamic'>
+        #
+(void)
+<b>setData</b><span>(_data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setMask-dynamic'>
+        #
+(void)
+<b>setMask</b><span>(mask_name, version = &quot;CURRENT&quot;)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#mergeData-dynamic'>
+        #
+(void)
+<b>mergeData</b><span>(_data, header_mode, mode, replace = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__mergeData-dynamic'>
+        #
+(void)
+<b>__mergeData</b><span>(top_level_data, mode, replace = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getMask-dynamic'>
+        #
+(void)
+<b>getMask</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getData-dynamic'>
+        #
+(void)
+<b>getData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasChildren-dynamic'>
+        #
+(void)
+<b>hasChildren</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getReplacementRecord-dynamic'>
+        #
+(void)
+<b>getReplacementRecord</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromDbWithMask-dynamic'>
+        #
+(void)
+<b>loadFromDbWithMask</b><span>(mask)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromDb-dynamic'>
+        #
+(void)
+<b>loadFromDb</b><span>(version, mask)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromSearch-dynamic'>
+        #
+(void)
+<b>loadFromSearch</b><span>(search_data, mask_name = null)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setDataByMaskName-dynamic'>
+        #
+(void)
+<b>setDataByMaskName</b><span>(mask_name)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getBestMaskName-dynamic'>
+        #
+(void)
+<b>getBestMaskName</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getAvailableMasks-dynamic'>
+        #
+(void)
+<b>getAvailableMasks</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getArrayForSearchFilter-dynamic'>
+        #
+(void)
+<b>getArrayForSearchFilter</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getCollectionObject-dynamic'>
+        #
+(void)
+<b>getCollectionObject</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isMappedMetadataCreated-dynamic'>
+        #
+(void)
+<b>isMappedMetadataCreated</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getGlobalObjectId-dynamic'>
+        #
+(void)
+<b>getGlobalObjectId</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getInstance-dynamic'>
+        #
+(void)
+<b>getInstance</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSystemObjectId-dynamic'>
+        #
+(void)
+<b>getSystemObjectId</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getUuid-dynamic'>
+        #
+(void)
+<b>getUuid</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#uniqueId-dynamic'>
+        #
+(void)
+<b>uniqueId</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#copy-dynamic'>
+        #
+(void)
+<b>copy</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#initData-dynamic'>
+        #
+(void)
+<b>initData</b><span>(objecttype, data = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#objecttype-dynamic'>
+        #
+(void)
+<b>objecttype</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#objecttypeLocalized-dynamic'>
+        #
+(void)
+<b>objecttypeLocalized</b><span>(include_instance = true)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#maskName-dynamic'>
+        #
+(void)
+<b>maskName</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getFormat-dynamic'>
+        #
+(void)
+<b>getFormat</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getRights-dynamic'>
+        #
+(void)
+<b>getRights</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasRight-dynamic'>
+        #
+(void)
+<b>hasRight</b><span>(right_name)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#id-dynamic'>
+        #
+(void)
+<b>id</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getParentId-dynamic'>
+        #
+(void)
+<b>getParentId</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getRootId-dynamic'>
+        #
+(void)
+<b>getRootId</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#pool-dynamic'>
+        #
+(void)
+<b>pool</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#changelog-dynamic'>
+        #
+(void)
+<b>changelog</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#version-dynamic'>
+        #
+(void)
+<b>version</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getVersion-dynamic'>
+        #
+(void)
+<b>getVersion</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#table-dynamic'>
+        #
+(void)
+<b>table</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#tableId-dynamic'>
+        #
+(void)
+<b>tableId</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderText-dynamic'>
+        #
+(void)
+<b>renderText</b><span>(data = @data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderShort-dynamic'>
+        #
+(void)
+<b>renderShort</b><span>(opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderCard1-dynamic'>
+        #
+(void)
+<b>renderCard1</b><span>(hierarchy, tags = true, highlight = false, data = @data, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderCard2-dynamic'>
+        #
+(void)
+<b>renderCard2</b><span>(hierarchy, tags = true, highlight = false, data = @data, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderCard3-dynamic'>
+        #
+(void)
+<b>renderCard3</b><span>(hierarchy, tags = true, highlight = false, data = @data, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__renderCard-dynamic'>
+        #
+(void)
+<b>__renderCard</b><span>(hierarchy, tags, highlight, max_standard, data, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderStandard-dynamic'>
+        #
+(void)
+<b>renderStandard</b><span>(opts = {
+  tags: true
+})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderHires-dynamic'>
+        #
+(void)
+<b>renderHires</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      this takes the full record EAS information 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getStandard-dynamic'>
+        #
+(void)
+<b>getStandard</b><span>(data = @data, force = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__getFirstStandard-dynamic'>
+        #
+(void)
+<b>__getFirstStandard</b><span>(data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderAltText-dynamic'>
+        #
+(void)
+<b>renderAltText</b><span>(data = @data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__getAltText-dynamic'>
+        #
+(void)
+<b>__getAltText</b><span>(standard)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderAssetsForStandard-dynamic'>
+        #
+(void)
+<b>renderAssetsForStandard</b><span>(standard, tmpl, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__render-dynamic'>
+        #
+(void)
+<b>__render</b><span>(tmpl_name, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getPathData-dynamic'>
+        #
+(void)
+<b>getPathData</b><span>(include_self = true)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasTags-dynamic'>
+        #
+(void)
+<b>hasTags</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderTags-dynamic'>
+        #
+(void)
+<b>renderTags</b><span>(style)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#dump-dynamic'>
+        #
+(void)
+<b>dump</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderTitle-dynamic'>
+        #
+(void)
+<b>renderTitle</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderTextResult-dynamic'>
+        #
+(void)
+<b>renderTextResult</b><span>(opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderTextDetail-dynamic'>
+        #
+(void)
+<b>renderTextDetail</b><span>(opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderPrint-dynamic'>
+        #
+(void)
+<b>renderPrint</b><span>(opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderEditor-dynamic'>
+        #
+(void)
+<b>renderEditor</b><span>(mode, header_mode, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderDetail-dynamic'>
+        #
+(void)
+<b>renderDetail</b><span>(mode, header_mode, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderLastModifiedLabel-dynamic'>
+        #
+(void)
+<b>renderLastModifiedLabel</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getFormat-dynamic'>
+        #
+(void)
+<b>getFormat</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getEASFields-dynamic'>
+        #
+(void)
+<b>getEASFields</b><span>(mode)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getCustomDataTypeFields-dynamic'>
+        #
+(void)
+<b>getCustomDataTypeFields</b><span>(mode, type)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getAssetsForBrowser-dynamic'>
+        #
+(void)
+<b>getAssetsForBrowser</b><span>(mode)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSaveData-dynamic'>
+        #
+(void)
+<b>getSaveData</b><span>(opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#checkSaveData-dynamic'>
+        #
+(void)
+<b>checkSaveData</b><span>(opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getCopyFromSaveData-dynamic'>
+        #
+(void)
+<b>getCopyFromSaveData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getStandardData-dynamic'>
+        #
+(void)
+<b>getStandardData</b><span>(data = @data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderHistoryBrowser-dynamic'>
+        #
+(void)
+<b>renderHistoryBrowser</b><span>(closeButton)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#showModal-dynamic'>
+        #
+(void)
+<b>showModal</b><span>(_opts = {
+  modal: {}
+})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#showPopover-dynamic'>
+        #
+(void)
+<b>showPopover</b><span>(_opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setCSSClasses-dynamic'>
+        #
+(void)
+<b>setCSSClasses</b><span>(element)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDetailShareUrl-dynamic'>
+        #
+(void)
+<b>getDetailShareUrl</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDeeplinkUrl-dynamic'>
+        #
+(void)
+<b>getDeeplinkUrl</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getOaiPmhUrl-dynamic'>
+        #
+(void)
+<b>getOaiPmhUrl</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#presentShareUrls-dynamic'>
+        #
+(void)
+<b>presentShareUrls</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDetailTools-dynamic'>
+        #
+(void)
+<b>getDetailTools</b><span>(_opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromCollectionObject-dynamic'>
+        #
+(void)
+<b>loadFromCollectionObject</b><span>(collection_object, format = &quot;long&quot;, mask_name = null, best_mask_filter = false, generate_rights = true)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      returns a deferred, which resolves with a new ResultObject 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadFromId-dynamic'>
+        #
+(void)
+<b>loadFromId</b><span>(objecttype, id, format = &quot;standard&quot;, mask_name = null, best_mask_filter = false, generate_rights = true)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>Class Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='renderPath-static'>
+      .
+(void)
+<b>renderPath</b><span>(path_els = [], content = false)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>renders a path separated by path separators
+path_els is an array of text
+content to false and a span is created, otherwise content is appended directly
+returns path template</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='showCollectionObjectInPopover-static'>
+      .
+(void)
+<b>showCollectionObjectInPopover</b><span>(opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromDb-static'>
+      .
+(void)
+<b>loadFromDb</b><span>(global_object_id)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromData-static'>
+      .
+(void)
+<b>loadFromData</b><span>(data, _format = &quot;long&quot;, present_error = true, best_mask_filter = false, generate_rights = false)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromGlobalObjectId-static'>
+      .
+(void)
+<b>loadFromGlobalObjectId</b><span>(gid, format, mask = null, best_mask_filter = false, generate_rights = true)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromId-static'>
+      .
+(void)
+<b>loadFromId</b><span>(objecttype, id, format = &quot;standard&quot;, mask_name = null, best_mask_filter = false, generate_rights = true)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='compareFormats-static'>
+      .
+(void)
+<b>compareFormats</b><span>(format1 = &quot;&quot;, format2 = &quot;&quot;)</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-dynamic'>
+      #
+(void)
+<b>constructor</b><span>(opts)</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='setData-dynamic'>
+      #
+(void)
+<b>setData</b><span>(_data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setMask-dynamic'>
+      #
+(void)
+<b>setMask</b><span>(mask_name, version = &quot;CURRENT&quot;)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='mergeData-dynamic'>
+      #
+(void)
+<b>mergeData</b><span>(_data, header_mode, mode, replace = false)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__mergeData-dynamic'>
+      #
+(void)
+<b>__mergeData</b><span>(top_level_data, mode, replace = false)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getMask-dynamic'>
+      #
+(void)
+<b>getMask</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getData-dynamic'>
+      #
+(void)
+<b>getData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasChildren-dynamic'>
+      #
+(void)
+<b>hasChildren</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getReplacementRecord-dynamic'>
+      #
+(void)
+<b>getReplacementRecord</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromDbWithMask-dynamic'>
+      #
+(void)
+<b>loadFromDbWithMask</b><span>(mask)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromDb-dynamic'>
+      #
+(void)
+<b>loadFromDb</b><span>(version, mask)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromSearch-dynamic'>
+      #
+(void)
+<b>loadFromSearch</b><span>(search_data, mask_name = null)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setDataByMaskName-dynamic'>
+      #
+(void)
+<b>setDataByMaskName</b><span>(mask_name)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getBestMaskName-dynamic'>
+      #
+(void)
+<b>getBestMaskName</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getAvailableMasks-dynamic'>
+      #
+(void)
+<b>getAvailableMasks</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getArrayForSearchFilter-dynamic'>
+      #
+(void)
+<b>getArrayForSearchFilter</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getCollectionObject-dynamic'>
+      #
+(void)
+<b>getCollectionObject</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isMappedMetadataCreated-dynamic'>
+      #
+(void)
+<b>isMappedMetadataCreated</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getGlobalObjectId-dynamic'>
+      #
+(void)
+<b>getGlobalObjectId</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getInstance-dynamic'>
+      #
+(void)
+<b>getInstance</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSystemObjectId-dynamic'>
+      #
+(void)
+<b>getSystemObjectId</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getUuid-dynamic'>
+      #
+(void)
+<b>getUuid</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='uniqueId-dynamic'>
+      #
+(void)
+<b>uniqueId</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='copy-dynamic'>
+      #
+(void)
+<b>copy</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='initData-dynamic'>
+      #
+(void)
+<b>initData</b><span>(objecttype, data = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='objecttype-dynamic'>
+      #
+(void)
+<b>objecttype</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='objecttypeLocalized-dynamic'>
+      #
+(void)
+<b>objecttypeLocalized</b><span>(include_instance = true)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='maskName-dynamic'>
+      #
+(void)
+<b>maskName</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getFormat-dynamic'>
+      #
+(void)
+<b>getFormat</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getRights-dynamic'>
+      #
+(void)
+<b>getRights</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasRight-dynamic'>
+      #
+(void)
+<b>hasRight</b><span>(right_name)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='id-dynamic'>
+      #
+(void)
+<b>id</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getParentId-dynamic'>
+      #
+(void)
+<b>getParentId</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getRootId-dynamic'>
+      #
+(void)
+<b>getRootId</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='pool-dynamic'>
+      #
+(void)
+<b>pool</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='changelog-dynamic'>
+      #
+(void)
+<b>changelog</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='version-dynamic'>
+      #
+(void)
+<b>version</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getVersion-dynamic'>
+      #
+(void)
+<b>getVersion</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='table-dynamic'>
+      #
+(void)
+<b>table</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='tableId-dynamic'>
+      #
+(void)
+<b>tableId</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderText-dynamic'>
+      #
+(void)
+<b>renderText</b><span>(data = @data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderShort-dynamic'>
+      #
+(void)
+<b>renderShort</b><span>(opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderCard1-dynamic'>
+      #
+(void)
+<b>renderCard1</b><span>(hierarchy, tags = true, highlight = false, data = @data, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderCard2-dynamic'>
+      #
+(void)
+<b>renderCard2</b><span>(hierarchy, tags = true, highlight = false, data = @data, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderCard3-dynamic'>
+      #
+(void)
+<b>renderCard3</b><span>(hierarchy, tags = true, highlight = false, data = @data, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__renderCard-dynamic'>
+      #
+(void)
+<b>__renderCard</b><span>(hierarchy, tags, highlight, max_standard, data, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderStandard-dynamic'>
+      #
+(void)
+<b>renderStandard</b><span>(opts = {
+  tags: true
+})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderHires-dynamic'>
+      #
+(void)
+<b>renderHires</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>this takes the full record EAS information</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getStandard-dynamic'>
+      #
+(void)
+<b>getStandard</b><span>(data = @data, force = false)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__getFirstStandard-dynamic'>
+      #
+(void)
+<b>__getFirstStandard</b><span>(data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderAltText-dynamic'>
+      #
+(void)
+<b>renderAltText</b><span>(data = @data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__getAltText-dynamic'>
+      #
+(void)
+<b>__getAltText</b><span>(standard)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderAssetsForStandard-dynamic'>
+      #
+(void)
+<b>renderAssetsForStandard</b><span>(standard, tmpl, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__render-dynamic'>
+      #
+(void)
+<b>__render</b><span>(tmpl_name, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getPathData-dynamic'>
+      #
+(void)
+<b>getPathData</b><span>(include_self = true)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasTags-dynamic'>
+      #
+(void)
+<b>hasTags</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderTags-dynamic'>
+      #
+(void)
+<b>renderTags</b><span>(style)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='dump-dynamic'>
+      #
+(void)
+<b>dump</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderTitle-dynamic'>
+      #
+(void)
+<b>renderTitle</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderTextResult-dynamic'>
+      #
+(void)
+<b>renderTextResult</b><span>(opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderTextDetail-dynamic'>
+      #
+(void)
+<b>renderTextDetail</b><span>(opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderPrint-dynamic'>
+      #
+(void)
+<b>renderPrint</b><span>(opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderEditor-dynamic'>
+      #
+(void)
+<b>renderEditor</b><span>(mode, header_mode, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderDetail-dynamic'>
+      #
+(void)
+<b>renderDetail</b><span>(mode, header_mode, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderLastModifiedLabel-dynamic'>
+      #
+(void)
+<b>renderLastModifiedLabel</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getFormat-dynamic'>
+      #
+(void)
+<b>getFormat</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getEASFields-dynamic'>
+      #
+(void)
+<b>getEASFields</b><span>(mode)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getCustomDataTypeFields-dynamic'>
+      #
+(void)
+<b>getCustomDataTypeFields</b><span>(mode, type)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getAssetsForBrowser-dynamic'>
+      #
+(void)
+<b>getAssetsForBrowser</b><span>(mode)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSaveData-dynamic'>
+      #
+(void)
+<b>getSaveData</b><span>(opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='checkSaveData-dynamic'>
+      #
+(void)
+<b>checkSaveData</b><span>(opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getCopyFromSaveData-dynamic'>
+      #
+(void)
+<b>getCopyFromSaveData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getStandardData-dynamic'>
+      #
+(void)
+<b>getStandardData</b><span>(data = @data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderHistoryBrowser-dynamic'>
+      #
+(void)
+<b>renderHistoryBrowser</b><span>(closeButton)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='showModal-dynamic'>
+      #
+(void)
+<b>showModal</b><span>(_opts = {
+  modal: {}
+})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='showPopover-dynamic'>
+      #
+(void)
+<b>showPopover</b><span>(_opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setCSSClasses-dynamic'>
+      #
+(void)
+<b>setCSSClasses</b><span>(element)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDetailShareUrl-dynamic'>
+      #
+(void)
+<b>getDetailShareUrl</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDeeplinkUrl-dynamic'>
+      #
+(void)
+<b>getDeeplinkUrl</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getOaiPmhUrl-dynamic'>
+      #
+(void)
+<b>getOaiPmhUrl</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='presentShareUrls-dynamic'>
+      #
+(void)
+<b>presentShareUrls</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDetailTools-dynamic'>
+      #
+(void)
+<b>getDetailTools</b><span>(_opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromCollectionObject-dynamic'>
+      #
+(void)
+<b>loadFromCollectionObject</b><span>(collection_object, format = &quot;long&quot;, mask_name = null, best_mask_filter = false, generate_rights = true)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>returns a deferred, which resolves with a new ResultObject</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadFromId-dynamic'>
+      #
+(void)
+<b>loadFromId</b><span>(objecttype, id, format = &quot;standard&quot;, mask_name = null, best_mask_filter = false, generate_rights = true)</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

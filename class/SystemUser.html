@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>SystemUser</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        SystemUser
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>shared&#47;BaseFields&#47;SystemUser.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/User.html'>User</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Variables Summary</h2>
+      
+      <h3 class='inherited'>
+        Variable inherited from
+        <a href='../class/User.html'>User</a>
+      </h3>
+      <p class='inherited'>
+        <a href='../class/User.html#defaultPicName-variable'>defaultPicName</a>
+        <a href='../class/User.html#newKey-variable'>newKey</a>
+      </p>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#isDeletable-dynamic'>
+        #
+(void)
+<b>isDeletable</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSaveData-dynamic'>
+        #
+(void)
+<b>getSaveData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getGroupsTab-dynamic'>
+        #
+(void)
+<b>getGroupsTab</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getAclTab-dynamic'>
+        #
+(void)
+<b>getAclTab</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSystemRightsTab-dynamic'>
+        #
+(void)
+<b>getSystemRightsTab</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#canBeCopied-dynamic'>
+        #
+(void)
+<b>canBeCopied</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/User.html'>User</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/User.html#initOpts-dynamic'>#initOpts</a>
+          <a href='../class/User.html#readOpts-dynamic'>#readOpts</a>
+          <a href='../class/User.html#managerInstance-dynamic'>#managerInstance</a>
+          <a href='../class/User.html#getPrimaryEmail-dynamic'>#getPrimaryEmail</a>
+          <a href='../class/User.html#getData-dynamic'>#getData</a>
+          <a href='../class/User.html#getTrayItems-dynamic'>#getTrayItems</a>
+          <a href='../class/User.html#setData-dynamic'>#setData</a>
+          <a href='../class/User.html#getFrontendLanguage-dynamic'>#getFrontendLanguage</a>
+          <a href='../class/User.html#copy-dynamic'>#copy</a>
+          <a href='../class/User.html#canBeCopied-dynamic'>#canBeCopied</a>
+          <a href='../class/User.html#getCopyAsNewData-dynamic'>#getCopyAsNewData</a>
+          <a href='../class/User.html#copyAsNew-dynamic'>#copyAsNew</a>
+          <a href='../class/User.html#loadData-dynamic'>#loadData</a>
+          <a href='../class/User.html#setDataOfPrefs-dynamic'>#setDataOfPrefs</a>
+          <a href='../class/User.html#renderContent-dynamic'>#renderContent</a>
+          <a href='../class/User.html#getType-dynamic'>#getType</a>
+          <a href='../class/User.html#getLogin-dynamic'>#getLogin</a>
+          <a href='../class/User.html#getAuthUrl-dynamic'>#getAuthUrl</a>
+          <a href='../class/User.html#getId-dynamic'>#getId</a>
+          <a href='../class/User.html#getApi-dynamic'>#getApi</a>
+          <a href='../class/User.html#getDisplayText-dynamic'>#getDisplayText</a>
+          <a href='../class/User.html#getContent-dynamic'>#getContent</a>
+          <a href='../class/User.html#getLimitedSaveData-dynamic'>#getLimitedSaveData</a>
+          <a href='../class/User.html#isAllowedLimited-dynamic'>#isAllowedLimited</a>
+          <a href='../class/User.html#saveLimited-dynamic'>#saveLimited</a>
+          <a href='../class/User.html#getSaveData-dynamic'>#getSaveData</a>
+          <a href='../class/User.html#getTabs-dynamic'>#getTabs</a>
+          <a href='../class/User.html#getAclTab-dynamic'>#getAclTab</a>
+          <a href='../class/User.html#getSystemRightsTab-dynamic'>#getSystemRightsTab</a>
+          <a href='../class/User.html#renderSystemAclTab-dynamic'>#renderSystemAclTab</a>
+          <a href='../class/User.html#renderAclTab-dynamic'>#renderAclTab</a>
+          <a href='../class/User.html#deselect-dynamic'>#deselect</a>
+          <a href='../class/User.html#renderPicture-dynamic'>#renderPicture</a>
+          <a href='../class/User.html#getGroups-dynamic'>#getGroups</a>
+          <a href='../class/User.html#getSystemRights-dynamic'>#getSystemRights</a>
+          <a href='../class/User.html#__getGeneralFields-dynamic'>#__getGeneralFields</a>
+          <a href='../class/User.html#getUserSelfManagementFields-dynamic'>#getUserSelfManagementFields</a>
+          <a href='../class/User.html#getUserSelfManagementFieldsNotOk-dynamic'>#getUserSelfManagementFieldsNotOk</a>
+          <a href='../class/User.html#getGeneralFields-dynamic'>#getGeneralFields</a>
+          <a href='../class/User.html#getAddressFields-dynamic'>#getAddressFields</a>
+          <a href='../class/User.html#__getAddressFields-dynamic'>#__getAddressFields</a>
+          <a href='../class/User.html#updatePasswordForm-dynamic'>#updatePasswordForm</a>
+          <a href='../class/User.html#isWritable-dynamic'>#isWritable</a>
+          <a href='../class/User.html#canEditSystemRights-dynamic'>#canEditSystemRights</a>
+          <a href='../class/User.html#canEditAcl-dynamic'>#canEditAcl</a>
+          <a href='../class/User.html#isDeletable-dynamic'>#isDeletable</a>
+          <a href='../class/User.html#getManagementFields-dynamic'>#getManagementFields</a>
+          <a href='../class/User.html#getPasswordFields-dynamic'>#getPasswordFields</a>
+          <a href='../class/User.html#renderCard-dynamic'>#renderCard</a>
+          <a href='../class/User.html#hasFlatTrayItems-dynamic'>#hasFlatTrayItems</a>
+          <a href='../class/User.html#initFields-static'>.initFields</a>
+          <a href='../class/User.html#getUserClassByData-static'>.getUserClassByData</a>
+          <a href='../class/User.html#newInstance-static'>.newInstance</a>
+          <a href='../class/SystemListManagerItem.html#setFather-dynamic'>#setFather</a>
+          <a href='../class/SystemListManagerItem.html#newText-dynamic'>#newText</a>
+          <a href='../class/SystemListManagerItem.html#isDataIncomplete-dynamic'>#isDataIncomplete</a>
+          <a href='../class/SystemListManagerItem.html#get-dynamic'>#get</a>
+          <a href='../class/SystemListManagerItem.html#load-dynamic'>#load</a>
+          <a href='../class/SystemListManagerItem.html#remove-dynamic'>#remove</a>
+          <a href='../class/SystemListManagerItem.html#_loadData-dynamic'>#_loadData</a>
+          <a href='../class/SystemListManagerItem.html#getDeleteConfirmLocaKey-dynamic'>#getDeleteConfirmLocaKey</a>
+          <a href='../class/SystemListManagerItem.html#delete-dynamic'>#delete</a>
+          <a href='../class/SystemListManagerItem.html#deleteOnServer-dynamic'>#deleteOnServer</a>
+          <a href='../class/SystemListManagerItem.html#getPaneContent-dynamic'>#getPaneContent</a>
+          <a href='../class/SystemListManagerItem.html#getCancelButton-dynamic'>#getCancelButton</a>
+          <a href='../class/SystemListManagerItem.html#getExtraButtons-dynamic'>#getExtraButtons</a>
+          <a href='../class/SystemListManagerItem.html#show-dynamic'>#show</a>
+          <a href='../class/SystemListManagerItem.html#getEditorPane-dynamic'>#getEditorPane</a>
+          <a href='../class/SystemListManagerItem.html#hasChanges-dynamic'>#hasChanges</a>
+          <a href='../class/SystemListManagerItem.html#registerDataChangedListener-dynamic'>#registerDataChangedListener</a>
+          <a href='../class/SystemListManagerItem.html#setStatus-dynamic'>#setStatus</a>
+          <a href='../class/SystemListManagerItem.html#resetDataChangedListener-dynamic'>#resetDataChangedListener</a>
+          <a href='../class/SystemListManagerItem.html#check_deselect-dynamic'>#check_deselect</a>
+          <a href='../class/SystemListManagerItem.html#select-dynamic'>#select</a>
+          <a href='../class/SystemListManagerItem.html#revertData-dynamic'>#revertData</a>
+          <a href='../class/SystemListManagerItem.html#save-dynamic'>#save</a>
+          <a href='../class/SystemListManagerItem.html#_save-dynamic'>#_save</a>
+          <a href='../class/SystemListManagerItem.html#isMovable-dynamic'>#isMovable</a>
+          <a href='../class/SystemListManagerItem.html#allowRowMove-dynamic'>#allowRowMove</a>
+          <a href='../class/SystemListManagerItem.html#moveNodeBefore-dynamic'>#moveNodeBefore</a>
+          <a href='../class/SystemListManagerItem.html#moveNodeAfter-dynamic'>#moveNodeAfter</a>
+          <a href='../class/SystemListManagerItem.html#moveNodeBack-dynamic'>#moveNodeBack</a>
+          <a href='../class/SystemListManagerItem.html#moveNodeConfirm-dynamic'>#moveNodeConfirm</a>
+          <a href='../class/SystemListManagerItem.html#getGroupsTab-dynamic'>#getGroupsTab</a>
+          <a href='../class/SystemListManagerItem.html#loadGroups-dynamic'>#loadGroups</a>
+          <a href='../class/SystemListManagerItem.html#getGroupsSaveData-dynamic'>#getGroupsSaveData</a>
+        </p>
+      </h2>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='isDeletable-dynamic'>
+      #
+(void)
+<b>isDeletable</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSaveData-dynamic'>
+      #
+(void)
+<b>getSaveData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getGroupsTab-dynamic'>
+      #
+(void)
+<b>getGroupsTab</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getAclTab-dynamic'>
+      #
+(void)
+<b>getAclTab</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSystemRightsTab-dynamic'>
+      #
+(void)
+<b>getSystemRightsTab</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='canBeCopied-dynamic'>
+      #
+(void)
+<b>canBeCopied</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

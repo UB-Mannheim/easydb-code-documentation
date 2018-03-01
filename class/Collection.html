@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>Collection</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        Collection
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>shared&#47;Collection&#47;Collection.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            CUI.ListViewTreeNode
+          </td>
+        </tr>
+      </table>
+      <h2>Direct Known Subclasses</h2>
+      <p class='children'>
+        <a href='../class/CollectionSearchNode.html'>CollectionSearchNode</a>
+        <a href='../class/CollectionStructure.html'>CollectionStructure</a>
+      </p>
+      <h2>Variables Summary</h2>
+      <dl class='constants'>
+  <dt id='__plugins-variable'>
+    __plugins
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>[]</code></pre>
+    
+  </dd>
+  <dt id='executeSearch-variable'>
+    executeSearch
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>null</code></pre>
+    <div class='docstring'>
+  <p>setting executeSearch to Function overwrites the default execute in Search</p>
+</div>
+<div class='tags'>
+</div>
+  </dd>
+</dl>
+      <h2>Class Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#registerPlugin-static'>
+        .
+(void)
+<b>registerPlugin</b><span>(plugin)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#initOpts-dynamic'>
+        #
+(void)
+<b>initOpts</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#readOpts-dynamic'>
+        #
+(void)
+<b>readOpts</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#on-dynamic'>
+        #
+(void)
+<b>on</b><span>(opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#off-dynamic'>
+        #
+(void)
+<b>off</b><span>(opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#triggerEvent-dynamic'>
+        #
+(void)
+<b>triggerEvent</b><span>(type, info = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setData-dynamic'>
+        #
+(void)
+<b>setData</b><span>(data = {
+  collection: {}
+})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addedToListView-dynamic'>
+        #
+(void)
+<b>addedToListView</b><span>(DOMNodes)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#prepareCurrentTools-dynamic'>
+        #
+(void)
+<b>prepareCurrentTools</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#select-dynamic'>
+        #
+(void)
+<b>select</b><span>(ev)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getData-dynamic'>
+        #
+(void)
+<b>getData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#canHaveChildren-dynamic'>
+        #
+(void)
+<b>canHaveChildren</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isCreateChildAllowed-dynamic'>
+        #
+(void)
+<b>isCreateChildAllowed</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isDeletable-dynamic'>
+        #
+(void)
+<b>isDeletable</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#canUnlink-dynamic'>
+        #
+(void)
+<b>canUnlink</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#selectWhenCollectionIsSelected-dynamic'>
+        #
+(void)
+<b>selectWhenCollectionIsSelected</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isSearchable-dynamic'>
+        #
+(void)
+<b>isSearchable</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#enableShare-dynamic'>
+        #
+(void)
+<b>enableShare</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#enableSettings-dynamic'>
+        #
+(void)
+<b>enableSettings</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#bigIcon-dynamic'>
+        #
+(void)
+<b>bigIcon</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#icon-dynamic'>
+        #
+(void)
+<b>icon</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getOwner-dynamic'>
+        #
+(void)
+<b>getOwner</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getCurrentTools-dynamic'>
+        #
+(void)
+<b>getCurrentTools</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getToolGroup-dynamic'>
+        #
+(void)
+<b>getToolGroup</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getToolNamePrefix-dynamic'>
+        #
+(void)
+<b>getToolNamePrefix</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getButtonbar-dynamic'>
+        #
+(void)
+<b>getButtonbar</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      renders a buttonbar which shows favorite tools available for the collection
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getButtons-dynamic'>
+        #
+(void)
+<b>getButtons</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getObjects-dynamic'>
+        #
+(void)
+<b>getObjects</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getCount-dynamic'>
+        #
+(void)
+<b>getCount</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDescription-dynamic'>
+        #
+(void)
+<b>getDescription</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getInfo-dynamic'>
+        #
+(void)
+<b>getInfo</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderContent-dynamic'>
+        #
+(void)
+<b>renderContent</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getContent-dynamic'>
+        #
+(void)
+<b>getContent</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#updateContent-dynamic'>
+        #
+(void)
+<b>updateContent</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#updateDisplay-dynamic'>
+        #
+(void)
+<b>updateDisplay</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#updateCounter-dynamic'>
+        #
+(void)
+<b>updateCounter</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#removeFromDOM-dynamic'>
+        #
+(void)
+<b>removeFromDOM</b><span>(remove_self = true)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderNameAsText-dynamic'>
+        #
+(void)
+<b>renderNameAsText</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderNameAsHtml-dynamic'>
+        #
+(void)
+<b>renderNameAsHtml</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getBadge-dynamic'>
+        #
+(void)
+<b>getBadge</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getBadgeIcon-dynamic'>
+        #
+(void)
+<b>getBadgeIcon</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#checkObjects-dynamic'>
+        #
+(void)
+<b>checkObjects</b><span>(collection_objects)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#insertObjects-dynamic'>
+        #
+(void)
+<b>insertObjects</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#removeObjects-dynamic'>
+        #
+(void)
+<b>removeObjects</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchFilter-dynamic'>
+        #
+(void)
+<b>getSearchFilter</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isSelectable-dynamic'>
+        #
+(void)
+<b>isSelectable</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#selectOnLoad-dynamic'>
+        #
+(void)
+<b>selectOnLoad</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getHashId-dynamic'>
+        #
+(void)
+<b>getHashId</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#reset-dynamic'>
+        #
+(void)
+<b>reset</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#matchesLocator-dynamic'>
+        #
+(void)
+<b>matchesLocator</b><span>(locator)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      returns true if the given locator (id, hash or uuid) matches
+this collection
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addToRequest-dynamic'>
+        #
+(void)
+<b>addToRequest</b><span>(request)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getStoreData-dynamic'>
+        #
+(void)
+<b>getStoreData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      this is used to store in saved searches 
+    </span>
+  </li>
+</ul>
+      <h2>Class Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='registerPlugin-static'>
+      .
+(void)
+<b>registerPlugin</b><span>(plugin)</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='initOpts-dynamic'>
+      #
+(void)
+<b>initOpts</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='readOpts-dynamic'>
+      #
+(void)
+<b>readOpts</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='on-dynamic'>
+      #
+(void)
+<b>on</b><span>(opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='off-dynamic'>
+      #
+(void)
+<b>off</b><span>(opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='triggerEvent-dynamic'>
+      #
+(void)
+<b>triggerEvent</b><span>(type, info = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setData-dynamic'>
+      #
+(void)
+<b>setData</b><span>(data = {
+  collection: {}
+})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addedToListView-dynamic'>
+      #
+(void)
+<b>addedToListView</b><span>(DOMNodes)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='prepareCurrentTools-dynamic'>
+      #
+(void)
+<b>prepareCurrentTools</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='select-dynamic'>
+      #
+(void)
+<b>select</b><span>(ev)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getData-dynamic'>
+      #
+(void)
+<b>getData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='canHaveChildren-dynamic'>
+      #
+(void)
+<b>canHaveChildren</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isCreateChildAllowed-dynamic'>
+      #
+(void)
+<b>isCreateChildAllowed</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isDeletable-dynamic'>
+      #
+(void)
+<b>isDeletable</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='canUnlink-dynamic'>
+      #
+(void)
+<b>canUnlink</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='selectWhenCollectionIsSelected-dynamic'>
+      #
+(void)
+<b>selectWhenCollectionIsSelected</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isSearchable-dynamic'>
+      #
+(void)
+<b>isSearchable</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='enableShare-dynamic'>
+      #
+(void)
+<b>enableShare</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='enableSettings-dynamic'>
+      #
+(void)
+<b>enableSettings</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='bigIcon-dynamic'>
+      #
+(void)
+<b>bigIcon</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='icon-dynamic'>
+      #
+(void)
+<b>icon</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getOwner-dynamic'>
+      #
+(void)
+<b>getOwner</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getCurrentTools-dynamic'>
+      #
+(void)
+<b>getCurrentTools</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getToolGroup-dynamic'>
+      #
+(void)
+<b>getToolGroup</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getToolNamePrefix-dynamic'>
+      #
+(void)
+<b>getToolNamePrefix</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getButtonbar-dynamic'>
+      #
+(void)
+<b>getButtonbar</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>renders a buttonbar which shows favorite tools available for the
+collection</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getButtons-dynamic'>
+      #
+(void)
+<b>getButtons</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getObjects-dynamic'>
+      #
+(void)
+<b>getObjects</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getCount-dynamic'>
+      #
+(void)
+<b>getCount</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDescription-dynamic'>
+      #
+(void)
+<b>getDescription</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getInfo-dynamic'>
+      #
+(void)
+<b>getInfo</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderContent-dynamic'>
+      #
+(void)
+<b>renderContent</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getContent-dynamic'>
+      #
+(void)
+<b>getContent</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updateContent-dynamic'>
+      #
+(void)
+<b>updateContent</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updateDisplay-dynamic'>
+      #
+(void)
+<b>updateDisplay</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updateCounter-dynamic'>
+      #
+(void)
+<b>updateCounter</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='removeFromDOM-dynamic'>
+      #
+(void)
+<b>removeFromDOM</b><span>(remove_self = true)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderNameAsText-dynamic'>
+      #
+(void)
+<b>renderNameAsText</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderNameAsHtml-dynamic'>
+      #
+(void)
+<b>renderNameAsHtml</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getBadge-dynamic'>
+      #
+(void)
+<b>getBadge</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getBadgeIcon-dynamic'>
+      #
+(void)
+<b>getBadgeIcon</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='checkObjects-dynamic'>
+      #
+(void)
+<b>checkObjects</b><span>(collection_objects)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='insertObjects-dynamic'>
+      #
+(void)
+<b>insertObjects</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='removeObjects-dynamic'>
+      #
+(void)
+<b>removeObjects</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchFilter-dynamic'>
+      #
+(void)
+<b>getSearchFilter</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isSelectable-dynamic'>
+      #
+(void)
+<b>isSelectable</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='selectOnLoad-dynamic'>
+      #
+(void)
+<b>selectOnLoad</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getHashId-dynamic'>
+      #
+(void)
+<b>getHashId</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='reset-dynamic'>
+      #
+(void)
+<b>reset</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='matchesLocator-dynamic'>
+      #
+(void)
+<b>matchesLocator</b><span>(locator)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>returns true if the given
+locator (id, hash or uuid) matches
+this collection</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addToRequest-dynamic'>
+      #
+(void)
+<b>addToRequest</b><span>(request)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getStoreData-dynamic'>
+      #
+(void)
+<b>getStoreData</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>this is used to store in saved searches</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

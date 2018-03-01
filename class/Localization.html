@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>Localization</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        Localization
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>base&#47;Localization.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            CUI.Element
+          </td>
+        </tr>
+      </table>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#init-dynamic'>
+        #
+(void)
+<b>init</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getPreferredDatabaseLanguage-dynamic'>
+        #
+(void)
+<b>getPreferredDatabaseLanguage</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getPreferredNavigatorLanguage-dynamic'>
+        #
+(void)
+<b>getPreferredNavigatorLanguage</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getLanguageControl-dynamic'>
+        #
+(void)
+<b>getLanguageControl</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getLanguageControlAdmin-dynamic'>
+        #
+(void)
+<b>getLanguageControlAdmin</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDatabaseLanguages-dynamic'>
+        #
+(void)
+<b>getDatabaseLanguages</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchLanguages-dynamic'>
+        #
+(void)
+<b>getSearchLanguages</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getBestFrontendValue-dynamic'>
+        #
+(void)
+<b>getBestFrontendValue</b><span>(data, html = false, html_only = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getBestDatabaseValue-dynamic'>
+        #
+(void)
+<b>getBestDatabaseValue</b><span>(data, html = false, html_only = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__getBestValue-dynamic'>
+        #
+(void)
+<b>__getBestValue</b><span>(data, html, html_only, frontend)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      html_only: with html == true, return &quot;null&quot; if no hightlighted text was found
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setLanguage-dynamic'>
+        #
+(void)
+<b>setLanguage</b><span>(culture)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getLanguage-dynamic'>
+        #
+(void)
+<b>getLanguage</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#str_span-dynamic'>
+        #
+(void)
+<b>str_span</b><span>(key, attrs, culture)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#str_default-dynamic'>
+        #
+(void)
+<b>str_default</b><span>(key, _default = null, attrs, culture)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#html-dynamic'>
+        #
+(void)
+<b>html</b><span>(key, attrs, culture = @culture, _default = void 0)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      like str but returns html, replacements are left as is
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#str-dynamic'>
+        #
+(void)
+<b>str</b><span>(key, attrs, culture = @culture, _default, as_html)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#get_complete_key-dynamic'>
+        #
+(void)
+<b>get_complete_key</b><span>(key, culture = @culture)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#get_key-dynamic'>
+        #
+(void)
+<b>get_key</b><span>(key, culture = @culture)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      get loca key 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#has-dynamic'>
+        #
+(void)
+<b>has</b><span>(key)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      checks if a key is localized 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#clean_keys-dynamic'>
+        #
+(void)
+<b>clean_keys</b><span>(map)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      clean keys, that is, remove all keys which are set to empty strings
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#get_valid_user_key_prefixes-dynamic'>
+        #
+(void)
+<b>get_valid_user_key_prefixes</b><span>(version)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      returns a list of valid key names this is a little bit of an alien in this file, but i could not think
+of a better place for now
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#update-dynamic'>
+        #
+(void)
+<b>update</b><span>(opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      update loca keys opts.realm: HEAD|CURRENT
+opts.keys: { key: { culture: value, culture: value } }
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#load_keys-dynamic'>
+        #
+(void)
+<b>load_keys</b><span>(language = @culture)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__replaceValue-dynamic'>
+        #
+(void)
+<b>__replaceValue</b><span>(v)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__addKeys-dynamic'>
+        #
+(void)
+<b>__addKeys</b><span>(data, language)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#load_more_keys-dynamic'>
+        #
+(void)
+<b>load_more_keys</b><span>(url)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      used by plugins to load more keys 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#set_user_keys-dynamic'>
+        #
+(void)
+<b>set_user_keys</b><span>(version, data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#load_user_keys-dynamic'>
+        #
+(void)
+<b>load_user_keys</b><span>(x_easydb)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#has_user_key-dynamic'>
+        #
+(void)
+<b>has_user_key</b><span>(realm, key)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#get_user_key-dynamic'>
+        #
+(void)
+<b>get_user_key</b><span>(realm, key)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#has_user_key_localized-dynamic'>
+        #
+(void)
+<b>has_user_key_localized</b><span>(realm, key)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#get_user_key_localized-dynamic'>
+        #
+(void)
+<b>get_user_key_localized</b><span>(realm, key, _default)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#text-dynamic'>
+        #
+(void)
+<b>text</b><span>(key, attrs)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#tooltip-dynamic'>
+        #
+(void)
+<b>tooltip</b><span>(key, attrs)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#formatNumber-dynamic'>
+        #
+(void)
+<b>formatNumber</b><span>(int, fixed = 2)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setLocaKeys-dynamic'>
+        #
+(void)
+<b>setLocaKeys</b><span>(div)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      find all &quot;data-loca-key&quot; and sets text 
+    </span>
+  </li>
+</ul>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='init-dynamic'>
+      #
+(void)
+<b>init</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getPreferredDatabaseLanguage-dynamic'>
+      #
+(void)
+<b>getPreferredDatabaseLanguage</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getPreferredNavigatorLanguage-dynamic'>
+      #
+(void)
+<b>getPreferredNavigatorLanguage</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getLanguageControl-dynamic'>
+      #
+(void)
+<b>getLanguageControl</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getLanguageControlAdmin-dynamic'>
+      #
+(void)
+<b>getLanguageControlAdmin</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDatabaseLanguages-dynamic'>
+      #
+(void)
+<b>getDatabaseLanguages</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchLanguages-dynamic'>
+      #
+(void)
+<b>getSearchLanguages</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getBestFrontendValue-dynamic'>
+      #
+(void)
+<b>getBestFrontendValue</b><span>(data, html = false, html_only = false)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getBestDatabaseValue-dynamic'>
+      #
+(void)
+<b>getBestDatabaseValue</b><span>(data, html = false, html_only = false)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__getBestValue-dynamic'>
+      #
+(void)
+<b>__getBestValue</b><span>(data, html, html_only, frontend)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>html_only: with html == true, return &quot;null&quot; if no hightlighted text
+was found</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setLanguage-dynamic'>
+      #
+(void)
+<b>setLanguage</b><span>(culture)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getLanguage-dynamic'>
+      #
+(void)
+<b>getLanguage</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='str_span-dynamic'>
+      #
+(void)
+<b>str_span</b><span>(key, attrs, culture)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='str_default-dynamic'>
+      #
+(void)
+<b>str_default</b><span>(key, _default = null, attrs, culture)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='html-dynamic'>
+      #
+(void)
+<b>html</b><span>(key, attrs, culture = @culture, _default = void 0)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>like str but returns html, replacements are left as
+is</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='str-dynamic'>
+      #
+(void)
+<b>str</b><span>(key, attrs, culture = @culture, _default, as_html)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='get_complete_key-dynamic'>
+      #
+(void)
+<b>get_complete_key</b><span>(key, culture = @culture)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='get_key-dynamic'>
+      #
+(void)
+<b>get_key</b><span>(key, culture = @culture)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>get loca key</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='has-dynamic'>
+      #
+(void)
+<b>has</b><span>(key)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>checks if a key is localized</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='clean_keys-dynamic'>
+      #
+(void)
+<b>clean_keys</b><span>(map)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>clean keys, that is, remove all keys which are set to
+empty strings</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='get_valid_user_key_prefixes-dynamic'>
+      #
+(void)
+<b>get_valid_user_key_prefixes</b><span>(version)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>returns a list of valid key names
+this is a little bit of an alien in this file, but i could not think
+of a better place for now</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='update-dynamic'>
+      #
+(void)
+<b>update</b><span>(opts)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>update loca keys
+opts.realm: HEAD|CURRENT
+opts.keys: { key: { culture: value, culture: value } }</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='load_keys-dynamic'>
+      #
+(void)
+<b>load_keys</b><span>(language = @culture)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__replaceValue-dynamic'>
+      #
+(void)
+<b>__replaceValue</b><span>(v)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__addKeys-dynamic'>
+      #
+(void)
+<b>__addKeys</b><span>(data, language)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='load_more_keys-dynamic'>
+      #
+(void)
+<b>load_more_keys</b><span>(url)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>used by plugins to load more keys</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='set_user_keys-dynamic'>
+      #
+(void)
+<b>set_user_keys</b><span>(version, data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='load_user_keys-dynamic'>
+      #
+(void)
+<b>load_user_keys</b><span>(x_easydb)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='has_user_key-dynamic'>
+      #
+(void)
+<b>has_user_key</b><span>(realm, key)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='get_user_key-dynamic'>
+      #
+(void)
+<b>get_user_key</b><span>(realm, key)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='has_user_key_localized-dynamic'>
+      #
+(void)
+<b>has_user_key_localized</b><span>(realm, key)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='get_user_key_localized-dynamic'>
+      #
+(void)
+<b>get_user_key_localized</b><span>(realm, key, _default)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='text-dynamic'>
+      #
+(void)
+<b>text</b><span>(key, attrs)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='tooltip-dynamic'>
+      #
+(void)
+<b>tooltip</b><span>(key, attrs)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='formatNumber-dynamic'>
+      #
+(void)
+<b>formatNumber</b><span>(int, fixed = 2)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setLocaKeys-dynamic'>
+      #
+(void)
+<b>setLocaKeys</b><span>(div)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>find all &quot;data-loca-key&quot; and sets text</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

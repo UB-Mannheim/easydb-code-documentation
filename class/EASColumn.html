@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>EASColumn</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        EASColumn
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>shared&#47;Fields&#47;EASColumn.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/DataColumn.html'>DataColumn</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Direct Known Subclasses</h2>
+      <p class='children'>
+        <a href='../class/EASColumnSearchOriginalFilename.html'>EASColumnSearchOriginalFilename</a>
+        <a href='../class/EASColumnLinkedObject.html'>EASColumnLinkedObject</a>
+        <a href='../class/EASField.html'>EASField</a>
+      </p>
+      <h2>Class Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#containImage-static'>
+        .
+(void)
+<b>containImage</b><span>(img)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      positions element inside another so that it has the mode &quot;contain&quot;
+
+    </span>
+  </li>
+</ul>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#renderStandard-dynamic'>
+        #
+(void)
+<b>renderStandard</b><span>(standard, data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getClass-dynamic'>
+        #
+(void)
+<b>getClass</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isEASFieldEnabled-dynamic'>
+        #
+(void)
+<b>isEASFieldEnabled</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getEASFieldOption-dynamic'>
+        #
+(void)
+<b>getEASFieldOption</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#nameForCollectionSave-dynamic'>
+        #
+(void)
+<b>nameForCollectionSave</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getCSVDestinationFields-dynamic'>
+        #
+(void)
+<b>getCSVDestinationFields</b><span>(csvImporter)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#supportsSeries-dynamic'>
+        #
+(void)
+<b>supportsSeries</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isSourceForMapping-dynamic'>
+        #
+(void)
+<b>isSourceForMapping</b><span>(required_type)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getReplacementRecord-dynamic'>
+        #
+(void)
+<b>getReplacementRecord</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSaveData-dynamic'>
+        #
+(void)
+<b>getSaveData</b><span>(data, save_data = {}, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#UNUSEDgetScaleAndPos-dynamic'>
+        #
+(void)
+<b>UNUSEDgetScaleAndPos</b><span>(value)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#UNUSEDsetScaleAndPos-dynamic'>
+        #
+(void)
+<b>UNUSEDsetScaleAndPos</b><span>(value, scale_and_pos)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDataAsString-dynamic'>
+        #
+(void)
+<b>getDataAsString</b><span>(data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isEmpty-dynamic'>
+        #
+(void)
+<b>isEmpty</b><span>(data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasUserData-dynamic'>
+        #
+(void)
+<b>hasUserData</b><span>(data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#checkValue-dynamic'>
+        #
+(void)
+<b>checkValue</b><span>(data, top_level_data, opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isExpertCommon-dynamic'>
+        #
+(void)
+<b>isExpertCommon</b><span>(mode)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getQueryFieldBadge-dynamic'>
+        #
+(void)
+<b>getQueryFieldBadge</b><span>(data, fields)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchFilter-dynamic'>
+        #
+(void)
+<b>getSearchFilter</b><span>(data, key)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#_getSearchFilterAndInfo-dynamic'>
+        #
+(void)
+<b>_getSearchFilterAndInfo</b><span>(data, key)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderSearchInput-dynamic'>
+        #
+(void)
+<b>renderSearchInput</b><span>(search_data, opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchPopoverFormFields-dynamic'>
+        #
+(void)
+<b>getSearchPopoverFormFields</b><span>(search_data, search_key, opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#uploadAdd-dynamic'>
+        #
+(void)
+<b>uploadAdd</b><span>(data, file)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      adds a new image to the list of images returns the idx of the newly added img in the list
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#updateData-dynamic'>
+        #
+(void)
+<b>updateData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#uploadDone-dynamic'>
+        #
+(void)
+<b>uploadDone</b><span>(data, file)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#uploadFail-dynamic'>
+        #
+(void)
+<b>uploadFail</b><span>(data, file)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getImgValueByIdx-dynamic'>
+        #
+(void)
+<b>getImgValueByIdx</b><span>(data, idx)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#removeAsset-dynamic'>
+        #
+(void)
+<b>removeAsset</b><span>(data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getImgValuePreferred-dynamic'>
+        #
+(void)
+<b>getImgValuePreferred</b><span>(data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasMetadataSelector-dynamic'>
+        #
+(void)
+<b>hasMetadataSelector</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasManageVersions-dynamic'>
+        #
+(void)
+<b>hasManageVersions</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasButtonDownloadOriginal-dynamic'>
+        #
+(void)
+<b>hasButtonDownloadOriginal</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#forceButtonDownloadOriginal-dynamic'>
+        #
+(void)
+<b>forceButtonDownloadOriginal</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasButtonShareUrl-dynamic'>
+        #
+(void)
+<b>hasButtonShareUrl</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasAssetBrowser-dynamic'>
+        #
+(void)
+<b>hasAssetBrowser</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasInstantRotate-dynamic'>
+        #
+(void)
+<b>hasInstantRotate</b><span>(value)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#scaleAndPosition-dynamic'>
+        #
+(void)
+<b>scaleAndPosition</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getUploadUrl-dynamic'>
+        #
+(void)
+<b>getUploadUrl</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderEditorInput-dynamic'>
+        #
+(void)
+<b>renderEditorInput</b><span>(data, top_level_data, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__showInAssetBrowser-dynamic'>
+        #
+(void)
+<b>__showInAssetBrowser</b><span>(img_el, value)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__hasAssetBrowser-dynamic'>
+        #
+(void)
+<b>__hasAssetBrowser</b><span>(el)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderDetailOutput-dynamic'>
+        #
+(void)
+<b>renderDetailOutput</b><span>(data, top_level_data, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getImgElementForValue-dynamic'>
+        #
+(void)
+<b>getImgElementForValue</b><span>(value, version, onUpdate, opts = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isVisible-dynamic'>
+        #
+(void)
+<b>isVisible</b><span>(mode, opts)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#sortExtraOpts-dynamic'>
+        #
+(void)
+<b>sortExtraOpts</b><span>(data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSortField-dynamic'>
+        #
+(void)
+<b>getSortField</b><span>(filter)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isSortGroupable-dynamic'>
+        #
+(void)
+<b>isSortGroupable</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#formatSortGroupable-dynamic'>
+        #
+(void)
+<b>formatSortGroupable</b><span>(item, filter)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isSortUnique-dynamic'>
+        #
+(void)
+<b>isSortUnique</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#allowAppendMultipleRows-dynamic'>
+        #
+(void)
+<b>allowAppendMultipleRows</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__multipleRowsFileUpload-dynamic'>
+        #
+(void)
+<b>__multipleRowsFileUpload</b><span>(append_row_func)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getXMLFormWrapperFields-dynamic'>
+        #
+(void)
+<b>getXMLFormWrapperFields</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getXMLFormWrapperType-dynamic'>
+        #
+(void)
+<b>getXMLFormWrapperType</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/DataColumn.html'>DataColumn</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/DataColumn.html#isEmpty-dynamic'>#isEmpty</a>
+          <a href='../class/DataColumn.html#renderData-dynamic'>#renderData</a>
+          <a href='../class/DataColumn.html#isVisible-dynamic'>#isVisible</a>
+          <a href='../class/DataColumn.html#renderStandard-dynamic'>#renderStandard</a>
+          <a href='../class/DataColumn.html#getCSVDestinationFields-dynamic'>#getCSVDestinationFields</a>
+          <a href='../class/DataColumn.html#getDataAsString-dynamic'>#getDataAsString</a>
+          <a href='../class/DataColumn.html#checkValue-dynamic'>#checkValue</a>
+          <a href='../class/DataColumn.html#checkBareValue-dynamic'>#checkBareValue</a>
+          <a href='../class/DataColumn.html#getElementOpts-dynamic'>#getElementOpts</a>
+          <a href='../class/DataColumn.html#getSearchFilterTokenized-dynamic'>#getSearchFilterTokenized</a>
+          <a href='../class/DataColumn.html#getSortFunction-dynamic'>#getSortFunction</a>
+          <a href='../class/DataColumn.html#getSearchField-dynamic'>#getSearchField</a>
+          <a href='../class/DataColumn.html#getSortField-dynamic'>#getSortField</a>
+          <a href='../class/Field.html#init-dynamic'>#init</a>
+          <a href='../class/Field.html#depth-dynamic'>#depth</a>
+          <a href='../class/Field.html#name-dynamic'>#name</a>
+          <a href='../class/Field.html#getReplacementRecord-dynamic'>#getReplacementRecord</a>
+          <a href='../class/Field.html#getDataForReplacementRecord-dynamic'>#getDataForReplacementRecord</a>
+          <a href='../class/Field.html#getFatherField-dynamic'>#getFatherField</a>
+          <a href='../class/Field.html#getFieldPath-dynamic'>#getFieldPath</a>
+          <a href='../class/Field.html#insideNested-dynamic'>#insideNested</a>
+          <a href='../class/Field.html#getMainMask-dynamic'>#getMainMask</a>
+          <a href='../class/Field.html#getMask-dynamic'>#getMask</a>
+          <a href='../class/Field.html#hasOption-dynamic'>#hasOption</a>
+          <a href='../class/Field.html#getOptions-dynamic'>#getOptions</a>
+          <a href='../class/Field.html#getOption-dynamic'>#getOption</a>
+          <a href='../class/Field.html#setOption-dynamic'>#setOption</a>
+          <a href='../class/Field.html#getQueryFieldBadge-dynamic'>#getQueryFieldBadge</a>
+          <a href='../class/Field.html#isRequired-dynamic'>#isRequired</a>
+          <a href='../class/Field.html#getClass-dynamic'>#getClass</a>
+          <a href='../class/Field.html#getElementClass-dynamic'>#getElementClass</a>
+          <a href='../class/Field.html#getLabel-dynamic'>#getLabel</a>
+          <a href='../class/Field.html#getInfoLabels-dynamic'>#getInfoLabels</a>
+          <a href='../class/Field.html#needsDirectRender-dynamic'>#needsDirectRender</a>
+          <a href='../class/Field.html#getTokenizer-dynamic'>#getTokenizer</a>
+          <a href='../class/Field.html#getDataForFieldData-dynamic'>#getDataForFieldData</a>
+          <a href='../class/Field.html#getCheckInfo-dynamic'>#getCheckInfo</a>
+          <a href='../class/Field.html#hasBulkCheckbox-dynamic'>#hasBulkCheckbox</a>
+          <a href='../class/Field.html#getBulkCheckbox-dynamic'>#getBulkCheckbox</a>
+          <a href='../class/Field.html#getBulkOptionsForm-dynamic'>#getBulkOptionsForm</a>
+          <a href='../class/Field.html#getBulkSaveData-dynamic'>#getBulkSaveData</a>
+          <a href='../class/Field.html#hasUserData-dynamic'>#hasUserData</a>
+          <a href='../class/Field.html#renderSearchInput-dynamic'>#renderSearchInput</a>
+          <a href='../class/Field.html#renderForEditor-dynamic'>#renderForEditor</a>
+          <a href='../class/Field.html#renderForExpert-dynamic'>#renderForExpert</a>
+          <a href='../class/Field.html#renderForDetail-dynamic'>#renderForDetail</a>
+          <a href='../class/Field.html#renderForTable-dynamic'>#renderForTable</a>
+          <a href='../class/Field.html#renderForSort-dynamic'>#renderForSort</a>
+          <a href='../class/Field.html#renderSortInput-dynamic'>#renderSortInput</a>
+          <a href='../class/Field.html#renderFieldAsGroup-dynamic'>#renderFieldAsGroup</a>
+          <a href='../class/Field.html#allowsList-dynamic'>#allowsList</a>
+          <a href='../class/Field.html#allowsCondensed-dynamic'>#allowsCondensed</a>
+          <a href='../class/Field.html#renderFieldLabel-dynamic'>#renderFieldLabel</a>
+          <a href='../class/Field.html#renderHalfWidth-dynamic'>#renderHalfWidth</a>
+          <a href='../class/Field.html#getBulkOptions-dynamic'>#getBulkOptions</a>
+          <a href='../class/Field.html#renderRow-dynamic'>#renderRow</a>
+          <a href='../class/Field.html#renderEditorInput-dynamic'>#renderEditorInput</a>
+          <a href='../class/Field.html#renderDetailOutput-dynamic'>#renderDetailOutput</a>
+          <a href='../class/Field.html#getSaveData-dynamic'>#getSaveData</a>
+          <a href='../class/Field.html#path-dynamic'>#path</a>
+          <a href='../class/Field.html#fullName-dynamic'>#fullName</a>
+          <a href='../class/Field.html#getFieldNamesForSuggest-dynamic'>#getFieldNamesForSuggest</a>
+          <a href='../class/Field.html#getCSVRecordKeyPath-dynamic'>#getCSVRecordKeyPath</a>
+          <a href='../class/Field.html#getCSVName-dynamic'>#getCSVName</a>
+          <a href='../class/Field.html#getCSVLabel-dynamic'>#getCSVLabel</a>
+          <a href='../class/Field.html#nameForCommonField-dynamic'>#nameForCommonField</a>
+          <a href='../class/Field.html#nameLocalized-dynamic'>#nameLocalized</a>
+          <a href='../class/Field.html#fullNameLocalized-dynamic'>#fullNameLocalized</a>
+          <a href='../class/Field.html#getOutputStandard-dynamic'>#getOutputStandard</a>
+          <a href='../class/Field.html#getOutputStandardEAS-dynamic'>#getOutputStandardEAS</a>
+          <a href='../class/Field.html#supportsFacet-dynamic'>#supportsFacet</a>
+          <a href='../class/Field.html#getFacet-dynamic'>#getFacet</a>
+          <a href='../class/Field.html#isVisibleToSaveData-dynamic'>#isVisibleToSaveData</a>
+          <a href='../class/Field.html#isSourceForMapping-dynamic'>#isSourceForMapping</a>
+          <a href='../class/Field.html#isReadOnly-dynamic'>#isReadOnly</a>
+          <a href='../class/Field.html#isVisibleSort-dynamic'>#isVisibleSort</a>
+          <a href='../class/Field.html#mergeData-dynamic'>#mergeData</a>
+          <a href='../class/Field.html#id-dynamic'>#id</a>
+          <a href='../class/Field.html#identifier-dynamic'>#identifier</a>
+          <a href='../class/Field.html#getSearchUnsetElement-dynamic'>#getSearchUnsetElement</a>
+          <a href='../class/Field.html#getSearchFilter-dynamic'>#getSearchFilter</a>
+          <a href='../class/Field.html#getSearchFilterWithNested-dynamic'>#getSearchFilterWithNested</a>
+          <a href='../class/Field.html#getUnsetSearchFilter-dynamic'>#getUnsetSearchFilter</a>
+          <a href='../class/Field.html#mergeReplaceData-dynamic'>#mergeReplaceData</a>
+          <a href='../class/Field.html#getExportOptions-dynamic'>#getExportOptions</a>
+          <a href='../class/Field.html#isExpertCommon-dynamic'>#isExpertCommon</a>
+          <a href='../class/Field.html#isExpertCommonOnly-dynamic'>#isExpertCommonOnly</a>
+          <a href='../class/Field.html#sortExtraOpts-dynamic'>#sortExtraOpts</a>
+          <a href='../class/Field.html#isSortUnique-dynamic'>#isSortUnique</a>
+          <a href='../class/Field.html#formatSortGroupable-dynamic'>#formatSortGroupable</a>
+          <a href='../class/Field.html#isSortGroupable-dynamic'>#isSortGroupable</a>
+          <a href='../class/Field.html#allowAppendMultipleRows-dynamic'>#allowAppendMultipleRows</a>
+          <a href='../class/Field.html#getXMLFormWrapperFields-dynamic'>#getXMLFormWrapperFields</a>
+          <a href='../class/Field.html#getXMLFormWrapperType-dynamic'>#getXMLFormWrapperType</a>
+          <a href='../class/Field.html#isInPopoverTopLevel-dynamic'>#isInPopoverTopLevel</a>
+          <a href='../class/Field.html#isTopLevelField-dynamic'>#isTopLevelField</a>
+          <a href='../class/Field.html#getStoreDataForUrlValue-dynamic'>#getStoreDataForUrlValue</a>
+          <a href='../class/Field.html#getSignature-dynamic'>#getSignature</a>
+          <a href='../class/Field.html#fromSignature-static'>.fromSignature</a>
+          <a href='../class/Field.html#focusFirstTextField-static'>.focusFirstTextField</a>
+          <a href='../class/Field.html#focusNextField-static'>.focusNextField</a>
+        </p>
+      </h2>
+      <h2>Class Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='containImage-static'>
+      .
+(void)
+<b>containImage</b><span>(img)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>positions element inside another so
+that it has the mode &quot;contain&quot;</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='renderStandard-dynamic'>
+      #
+(void)
+<b>renderStandard</b><span>(standard, data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getClass-dynamic'>
+      #
+(void)
+<b>getClass</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isEASFieldEnabled-dynamic'>
+      #
+(void)
+<b>isEASFieldEnabled</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getEASFieldOption-dynamic'>
+      #
+(void)
+<b>getEASFieldOption</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='nameForCollectionSave-dynamic'>
+      #
+(void)
+<b>nameForCollectionSave</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getCSVDestinationFields-dynamic'>
+      #
+(void)
+<b>getCSVDestinationFields</b><span>(csvImporter)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='supportsSeries-dynamic'>
+      #
+(void)
+<b>supportsSeries</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isSourceForMapping-dynamic'>
+      #
+(void)
+<b>isSourceForMapping</b><span>(required_type)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getReplacementRecord-dynamic'>
+      #
+(void)
+<b>getReplacementRecord</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSaveData-dynamic'>
+      #
+(void)
+<b>getSaveData</b><span>(data, save_data = {}, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='UNUSEDgetScaleAndPos-dynamic'>
+      #
+(void)
+<b>UNUSEDgetScaleAndPos</b><span>(value)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='UNUSEDsetScaleAndPos-dynamic'>
+      #
+(void)
+<b>UNUSEDsetScaleAndPos</b><span>(value, scale_and_pos)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDataAsString-dynamic'>
+      #
+(void)
+<b>getDataAsString</b><span>(data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isEmpty-dynamic'>
+      #
+(void)
+<b>isEmpty</b><span>(data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasUserData-dynamic'>
+      #
+(void)
+<b>hasUserData</b><span>(data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='checkValue-dynamic'>
+      #
+(void)
+<b>checkValue</b><span>(data, top_level_data, opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isExpertCommon-dynamic'>
+      #
+(void)
+<b>isExpertCommon</b><span>(mode)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getQueryFieldBadge-dynamic'>
+      #
+(void)
+<b>getQueryFieldBadge</b><span>(data, fields)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchFilter-dynamic'>
+      #
+(void)
+<b>getSearchFilter</b><span>(data, key)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='_getSearchFilterAndInfo-dynamic'>
+      #
+(void)
+<b>_getSearchFilterAndInfo</b><span>(data, key)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderSearchInput-dynamic'>
+      #
+(void)
+<b>renderSearchInput</b><span>(search_data, opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchPopoverFormFields-dynamic'>
+      #
+(void)
+<b>getSearchPopoverFormFields</b><span>(search_data, search_key, opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='uploadAdd-dynamic'>
+      #
+(void)
+<b>uploadAdd</b><span>(data, file)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>adds a new image to the list of images
+returns the idx of the newly added img in the list</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updateData-dynamic'>
+      #
+(void)
+<b>updateData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='uploadDone-dynamic'>
+      #
+(void)
+<b>uploadDone</b><span>(data, file)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='uploadFail-dynamic'>
+      #
+(void)
+<b>uploadFail</b><span>(data, file)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getImgValueByIdx-dynamic'>
+      #
+(void)
+<b>getImgValueByIdx</b><span>(data, idx)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='removeAsset-dynamic'>
+      #
+(void)
+<b>removeAsset</b><span>(data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getImgValuePreferred-dynamic'>
+      #
+(void)
+<b>getImgValuePreferred</b><span>(data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasMetadataSelector-dynamic'>
+      #
+(void)
+<b>hasMetadataSelector</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasManageVersions-dynamic'>
+      #
+(void)
+<b>hasManageVersions</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasButtonDownloadOriginal-dynamic'>
+      #
+(void)
+<b>hasButtonDownloadOriginal</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='forceButtonDownloadOriginal-dynamic'>
+      #
+(void)
+<b>forceButtonDownloadOriginal</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasButtonShareUrl-dynamic'>
+      #
+(void)
+<b>hasButtonShareUrl</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasAssetBrowser-dynamic'>
+      #
+(void)
+<b>hasAssetBrowser</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasInstantRotate-dynamic'>
+      #
+(void)
+<b>hasInstantRotate</b><span>(value)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='scaleAndPosition-dynamic'>
+      #
+(void)
+<b>scaleAndPosition</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getUploadUrl-dynamic'>
+      #
+(void)
+<b>getUploadUrl</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderEditorInput-dynamic'>
+      #
+(void)
+<b>renderEditorInput</b><span>(data, top_level_data, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__showInAssetBrowser-dynamic'>
+      #
+(void)
+<b>__showInAssetBrowser</b><span>(img_el, value)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__hasAssetBrowser-dynamic'>
+      #
+(void)
+<b>__hasAssetBrowser</b><span>(el)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderDetailOutput-dynamic'>
+      #
+(void)
+<b>renderDetailOutput</b><span>(data, top_level_data, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getImgElementForValue-dynamic'>
+      #
+(void)
+<b>getImgElementForValue</b><span>(value, version, onUpdate, opts = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isVisible-dynamic'>
+      #
+(void)
+<b>isVisible</b><span>(mode, opts)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='sortExtraOpts-dynamic'>
+      #
+(void)
+<b>sortExtraOpts</b><span>(data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSortField-dynamic'>
+      #
+(void)
+<b>getSortField</b><span>(filter)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isSortGroupable-dynamic'>
+      #
+(void)
+<b>isSortGroupable</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='formatSortGroupable-dynamic'>
+      #
+(void)
+<b>formatSortGroupable</b><span>(item, filter)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isSortUnique-dynamic'>
+      #
+(void)
+<b>isSortUnique</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='allowAppendMultipleRows-dynamic'>
+      #
+(void)
+<b>allowAppendMultipleRows</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__multipleRowsFileUpload-dynamic'>
+      #
+(void)
+<b>__multipleRowsFileUpload</b><span>(append_row_func)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getXMLFormWrapperFields-dynamic'>
+      #
+(void)
+<b>getXMLFormWrapperFields</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getXMLFormWrapperType-dynamic'>
+      #
+(void)
+<b>getXMLFormWrapperType</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

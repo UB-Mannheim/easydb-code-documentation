@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>PresentationDownloadManager</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        PresentationDownloadManager
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>shared&#47;Collection&#47;Presentation&#47;PresentationDownloadManager.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/DownloadManager.html'>DownloadManager</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Variables Summary</h2>
+      
+      <h3 class='inherited'>
+        Variable inherited from
+        <a href='../class/DownloadManager.html'>DownloadManager</a>
+      </h3>
+      <p class='inherited'>
+        <a href='../class/ExportManager.html#__plugins-variable'>__plugins</a>
+      </p>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#initOpts-dynamic'>
+        #
+(void)
+<b>initOpts</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#readOpts-dynamic'>
+        #
+(void)
+<b>readOpts</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#showUserAdminMessages-dynamic'>
+        #
+(void)
+<b>showUserAdminMessages</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getMenuButton-dynamic'>
+        #
+(void)
+<b>getMenuButton</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addToRequest-dynamic'>
+        #
+(void)
+<b>addToRequest</b><span>(request = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#gatherBaseData-dynamic'>
+        #
+(void)
+<b>gatherBaseData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getAssetVersionsToExport-dynamic'>
+        #
+(void)
+<b>getAssetVersionsToExport</b><span>(asset, gid)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#gatherAssetsForExport-dynamic'>
+        #
+(void)
+<b>gatherAssetsForExport</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getExportSaveData-dynamic'>
+        #
+(void)
+<b>getExportSaveData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/DownloadManager.html'>DownloadManager</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/DownloadManager.html#initOpts-dynamic'>#initOpts</a>
+          <a href='../class/DownloadManager.html#readOpts-dynamic'>#readOpts</a>
+          <a href='../class/DownloadManager.html#init-dynamic'>#init</a>
+          <a href='../class/DownloadManager.html#gatherBaseData-dynamic'>#gatherBaseData</a>
+          <a href='../class/DownloadManager.html#hasDownloadableVersion-dynamic'>#hasDownloadableVersion</a>
+          <a href='../class/DownloadManager.html#getButton-dynamic'>#getButton</a>
+          <a href='../class/DownloadManager.html#getTitle-dynamic'>#getTitle</a>
+          <a href='../class/DownloadManager.html#getDownloadPrepareError-dynamic'>#getDownloadPrepareError</a>
+          <a href='../class/DownloadManager.html#getButtonStartLocaKey-dynamic'>#getButtonStartLocaKey</a>
+          <a href='../class/DownloadManager.html#showUserAdminMessages-dynamic'>#showUserAdminMessages</a>
+          <a href='../class/DownloadManager.html#startExport-dynamic'>#startExport</a>
+          <a href='../class/DownloadManager.html#getContent-dynamic'>#getContent</a>
+          <a href='../class/DownloadManager.html#getPluginSelect-dynamic'>#getPluginSelect</a>
+          <a href='../class/DownloadManager.html#getExportSaveData-dynamic'>#getExportSaveData</a>
+          <a href='../class/DownloadManager.html#filterDownloadableFiles-dynamic'>#filterDownloadableFiles</a>
+          <a href='../class/DownloadManager.html#acceptVersionForDownload-dynamic'>#acceptVersionForDownload</a>
+          <a href='../class/DownloadManager.html#getWaitDialogLocaKey-dynamic'>#getWaitDialogLocaKey</a>
+          <a href='../class/DownloadManager.html#downloadFiles-dynamic'>#downloadFiles</a>
+          <a href='../class/DownloadManager.html#getDownloadUrl-dynamic'>#getDownloadUrl</a>
+          <a href='../class/DownloadManager.html#sendFile-dynamic'>#sendFile</a>
+          <a href='../class/DownloadManager.html#saveExport-dynamic'>#saveExport</a>
+          <a href='../class/ExportManager.html#registerPlugin-static'>.registerPlugin</a>
+          <a href='../class/ExportManager.html#expandForExport-dynamic'>#expandForExport</a>
+          <a href='../class/ExportManager.html#prepareExport-dynamic'>#prepareExport</a>
+          <a href='../class/ExportManager.html#renderContent-dynamic'>#renderContent</a>
+          <a href='../class/ExportManager.html#getFilenameTemplateField-dynamic'>#getFilenameTemplateField</a>
+          <a href='../class/ExportManager.html#__updateSaveButton-dynamic'>#__updateSaveButton</a>
+          <a href='../class/ExportManager.html#__initIsChanged-dynamic'>#__initIsChanged</a>
+          <a href='../class/ExportManager.html#__isChanged-dynamic'>#__isChanged</a>
+          <a href='../class/ExportManager.html#getMetadataField-dynamic'>#getMetadataField</a>
+          <a href='../class/ExportManager.html#openModalToUpdateName-dynamic'>#openModalToUpdateName</a>
+          <a href='../class/ExportManager.html#getPluginByName-static'>.getPluginByName</a>
+          <a href='../class/ExportManager.html#addToRequest-dynamic'>#addToRequest</a>
+          <a href='../class/ExportManager.html#setEASColumnsInfo-dynamic'>#setEASColumnsInfo</a>
+          <a href='../class/ExportManager.html#getEASColumnsInfo-dynamic'>#getEASColumnsInfo</a>
+          <a href='../class/ExportManager.html#destroy-dynamic'>#destroy</a>
+          <a href='../class/ExportManager.html#getExportData-dynamic'>#getExportData</a>
+        </p>
+      </h2>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-dynamic'>
+      #
+(void)
+<b>constructor</b><span>(opts)</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='initOpts-dynamic'>
+      #
+(void)
+<b>initOpts</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='readOpts-dynamic'>
+      #
+(void)
+<b>readOpts</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='showUserAdminMessages-dynamic'>
+      #
+(void)
+<b>showUserAdminMessages</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getMenuButton-dynamic'>
+      #
+(void)
+<b>getMenuButton</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addToRequest-dynamic'>
+      #
+(void)
+<b>addToRequest</b><span>(request = {})</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='gatherBaseData-dynamic'>
+      #
+(void)
+<b>gatherBaseData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getAssetVersionsToExport-dynamic'>
+      #
+(void)
+<b>getAssetVersionsToExport</b><span>(asset, gid)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='gatherAssetsForExport-dynamic'>
+      #
+(void)
+<b>gatherAssetsForExport</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getExportSaveData-dynamic'>
+      #
+(void)
+<b>getExportSaveData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

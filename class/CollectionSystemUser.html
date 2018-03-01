@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>CollectionSystemUser</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        CollectionSystemUser
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>shared&#47;Collection&#47;CollectionSystemUser.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/CollectionSystem.html'>CollectionSystem</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Variables Summary</h2>
+      
+      <h3 class='inherited'>
+        Variable inherited from
+        <a href='../class/CollectionSystem.html'>CollectionSystem</a>
+      </h3>
+      <p class='inherited'>
+        <a href='../class/Collection.html#__plugins-variable'>__plugins</a>
+        <a href='../class/Collection.html#executeSearch-variable'>executeSearch</a>
+      </p>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#icon-dynamic'>
+        #
+(void)
+<b>icon</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#enableShare-dynamic'>
+        #
+(void)
+<b>enableShare</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isSelectable-dynamic'>
+        #
+(void)
+<b>isSelectable</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderNameAsHtml-dynamic'>
+        #
+(void)
+<b>renderNameAsHtml</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#renderNameAsText-dynamic'>
+        #
+(void)
+<b>renderNameAsText</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isLeaf-dynamic'>
+        #
+(void)
+<b>isLeaf</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchFilter-dynamic'>
+        #
+(void)
+<b>getSearchFilter</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/CollectionSystem.html'>CollectionSystem</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/CollectionSystem.html#icon-dynamic'>#icon</a>
+          <a href='../class/CollectionSystem.html#getCount-dynamic'>#getCount</a>
+          <a href='../class/CollectionSystem.html#canAppend-dynamic'>#canAppend</a>
+          <a href='../class/CollectionSystem.html#isPresentable-dynamic'>#isPresentable</a>
+          <a href='../class/CollectionSystem.html#isSelectable-dynamic'>#isSelectable</a>
+          <a href='../class/CollectionSystem.html#isRenamable-dynamic'>#isRenamable</a>
+          <a href='../class/CollectionSystem.html#isDownloadable-dynamic'>#isDownloadable</a>
+          <a href='../class/CollectionSystem.html#isExportable-dynamic'>#isExportable</a>
+          <a href='../class/CollectionSystem.html#isSearchable-dynamic'>#isSearchable</a>
+          <a href='../class/CollectionSystem.html#getEmptyLabelLocaKey-dynamic'>#getEmptyLabelLocaKey</a>
+          <a href='../class/CollectionSystem.html#getGeneralFormFields-dynamic'>#getGeneralFormFields</a>
+          <a href='../class/CollectionSystem.html#getCounterItems-dynamic'>#getCounterItems</a>
+          <a href='../class/CollectionSystem.html#showDetail-dynamic'>#showDetail</a>
+          <a href='../class/CollectionSystem.html#setDisplayname-dynamic'>#setDisplayname</a>
+          <a href='../class/CollectionSystem.html#getSaveData-dynamic'>#getSaveData</a>
+          <a href='../class/CollectionSystem.html#isDeletable-dynamic'>#isDeletable</a>
+          <a href='../class/CollectionSystem.html#makeDraggable-dynamic'>#makeDraggable</a>
+          <a href='../class/CollectionWorkfolder.html#placeholder-dynamic'>#placeholder</a>
+          <a href='../class/CollectionWorkfolder.html#setData-dynamic'>#setData</a>
+          <a href='../class/CollectionWorkfolder.html#getCurrentTools-dynamic'>#getCurrentTools</a>
+          <a href='../class/CollectionWorkfolder.html#removeObjects-dynamic'>#removeObjects</a>
+          <a href='../class/CollectionWorkfolder.html#newInstance-static'>.newInstance</a>
+          <a href='../class/CollectionWorkfolder.html#__createNewCopy-dynamic'>#__createNewCopy</a>
+          <a href='../class/CollectionStorable.html#equals-dynamic'>#equals</a>
+          <a href='../class/CollectionStorable.html#getData-dynamic'>#getData</a>
+          <a href='../class/CollectionStorable.html#getHashId-dynamic'>#getHashId</a>
+          <a href='../class/CollectionStorable.html#getChildren-dynamic'>#getChildren</a>
+          <a href='../class/CollectionStorable.html#hasChildren-dynamic'>#hasChildren</a>
+          <a href='../class/CollectionStorable.html#getDescription-dynamic'>#getDescription</a>
+          <a href='../class/CollectionStorable.html#getContent-dynamic'>#getContent</a>
+          <a href='../class/CollectionStorable.html#__showWaitModal-dynamic'>#__showWaitModal</a>
+          <a href='../class/CollectionStorable.html#__doUpload-dynamic'>#__doUpload</a>
+          <a href='../class/CollectionStorable.html#__clearUpload-dynamic'>#__clearUpload</a>
+          <a href='../class/CollectionStorable.html#__saveUpload-dynamic'>#__saveUpload</a>
+          <a href='../class/CollectionStorable.html#initDropzone-dynamic'>#initDropzone</a>
+          <a href='../class/CollectionStorable.html#canUpload-dynamic'>#canUpload</a>
+          <a href='../class/CollectionStorable.html#editPromptText-dynamic'>#editPromptText</a>
+          <a href='../class/CollectionStorable.html#edit-dynamic'>#edit</a>
+          <a href='../class/CollectionStorable.html#save-dynamic'>#save</a>
+          <a href='../class/CollectionStorable.html#prepareCurrentTools-dynamic'>#prepareCurrentTools</a>
+          <a href='../class/CollectionStorable.html#addedToListView-dynamic'>#addedToListView</a>
+          <a href='../class/CollectionStorable.html#acceptDrop-dynamic'>#acceptDrop</a>
+          <a href='../class/CollectionStorable.html#takeDrop-dynamic'>#takeDrop</a>
+          <a href='../class/CollectionStorable.html#removeChild-dynamic'>#removeChild</a>
+          <a href='../class/CollectionStorable.html#deselect-dynamic'>#deselect</a>
+          <a href='../class/CollectionStorable.html#getId-dynamic'>#getId</a>
+          <a href='../class/CollectionStorable.html#getVersion-dynamic'>#getVersion</a>
+          <a href='../class/CollectionStorable.html#getUUID-dynamic'>#getUUID</a>
+          <a href='../class/CollectionStorable.html#matchesLocator-dynamic'>#matchesLocator</a>
+          <a href='../class/CollectionStorable.html#delete-dynamic'>#delete</a>
+          <a href='../class/CollectionStorable.html#renderNameAsHtml-dynamic'>#renderNameAsHtml</a>
+          <a href='../class/CollectionStorable.html#renderNameAsText-dynamic'>#renderNameAsText</a>
+          <a href='../class/CollectionStorable.html#refresh-dynamic'>#refresh</a>
+          <a href='../class/CollectionStorable.html#copy-dynamic'>#copy</a>
+          <a href='../class/CollectionStorable.html#loadFromDb-dynamic'>#loadFromDb</a>
+          <a href='../class/CollectionStorable.html#createObjectsTab-dynamic'>#createObjectsTab</a>
+          <a href='../class/CollectionStorable.html#getShareUrl-dynamic'>#getShareUrl</a>
+          <a href='../class/CollectionStorable.html#isCreateChildAllowed-dynamic'>#isCreateChildAllowed</a>
+          <a href='../class/CollectionStorable.html#isWritable-dynamic'>#isWritable</a>
+          <a href='../class/CollectionStorable.html#canUnlink-dynamic'>#canUnlink</a>
+          <a href='../class/CollectionStorable.html#enableShare-dynamic'>#enableShare</a>
+          <a href='../class/CollectionStorable.html#enableSettings-dynamic'>#enableSettings</a>
+          <a href='../class/CollectionStorable.html#popoverEditorSettings-dynamic'>#popoverEditorSettings</a>
+          <a href='../class/CollectionStorable.html#popoverEditorShare-dynamic'>#popoverEditorShare</a>
+          <a href='../class/CollectionStorable.html#getSearchFilter-dynamic'>#getSearchFilter</a>
+          <a href='../class/CollectionStorable.html#insertInProgress-dynamic'>#insertInProgress</a>
+          <a href='../class/CollectionStorable.html#insertObjects-dynamic'>#insertObjects</a>
+          <a href='../class/CollectionStorable.html#addToRequest-dynamic'>#addToRequest</a>
+          <a href='../class/CollectionStorable.html#executeSearch-dynamic'>#executeSearch</a>
+          <a href='../class/CollectionWithDetail.html#readOpts-dynamic'>#readOpts</a>
+          <a href='../class/CollectionWithDetail.html#unregisterEvents-dynamic'>#unregisterEvents</a>
+          <a href='../class/CollectionWithDetail.html#registerEvents-dynamic'>#registerEvents</a>
+          <a href='../class/CollectionWithDetail.html#setManager-dynamic'>#setManager</a>
+          <a href='../class/CollectionWithDetail.html#isShowingInSearch-dynamic'>#isShowingInSearch</a>
+          <a href='../class/CollectionWithDetail.html#updateAfterInsertOrRemoveEvent-dynamic'>#updateAfterInsertOrRemoveEvent</a>
+          <a href='../class/CollectionWithDetail.html#showFullscreen-dynamic'>#showFullscreen</a>
+          <a href='../class/CollectionWithDetail.html#getDownloadManagerClass-dynamic'>#getDownloadManagerClass</a>
+          <a href='../class/CollectionWithDetail.html#makeDroppable-dynamic'>#makeDroppable</a>
+          <a href='../class/CollectionWithDetail.html#makeDetailDroppable-dynamic'>#makeDetailDroppable</a>
+          <a href='../class/CollectionWithDetail.html#select-dynamic'>#select</a>
+          <a href='../class/CollectionWithDetail.html#isFullscreenable-dynamic'>#isFullscreenable</a>
+          <a href='../class/CollectionWithDetail.html#isPrintable-dynamic'>#isPrintable</a>
+          <a href='../class/CollectionWithDetail.html#destroy-dynamic'>#destroy</a>
+          <a href='../class/CollectionSearchNode.html#initOpts-dynamic'>#initOpts</a>
+          <a href='../class/CollectionSearchNode.html#getManager-dynamic'>#getManager</a>
+          <a href='../class/CollectionSearchNode.html#getSelectedNodeKey-dynamic'>#getSelectedNodeKey</a>
+          <a href='../class/CollectionSearchNode.html#loadInSearchOnSelect-dynamic'>#loadInSearchOnSelect</a>
+          <a href='../class/CollectionSearchNode.html#showInSearch-dynamic'>#showInSearch</a>
+          <a href='../class/CollectionSearchNode.html#unshowInSearch-dynamic'>#unshowInSearch</a>
+          <a href='../class/CollectionSearchNode.html#getQueryElement-dynamic'>#getQueryElement</a>
+          <a href='../class/CollectionSearchNode.html#queryElementDestroyed-dynamic'>#queryElementDestroyed</a>
+          <a href='../class/CollectionSearchNode.html#setSearch-dynamic'>#setSearch</a>
+          <a href='../class/CollectionSearchNode.html#getSearch-dynamic'>#getSearch</a>
+          <a href='../class/CollectionSearchNode.html#ignoreSearchManagers-dynamic'>#ignoreSearchManagers</a>
+          <a href='../class/CollectionSearchNode.html#showInSearchWithChildren-dynamic'>#showInSearchWithChildren</a>
+          <a href='../class/Collection.html#on-dynamic'>#on</a>
+          <a href='../class/Collection.html#off-dynamic'>#off</a>
+          <a href='../class/Collection.html#triggerEvent-dynamic'>#triggerEvent</a>
+          <a href='../class/Collection.html#canHaveChildren-dynamic'>#canHaveChildren</a>
+          <a href='../class/Collection.html#selectWhenCollectionIsSelected-dynamic'>#selectWhenCollectionIsSelected</a>
+          <a href='../class/Collection.html#bigIcon-dynamic'>#bigIcon</a>
+          <a href='../class/Collection.html#getOwner-dynamic'>#getOwner</a>
+          <a href='../class/Collection.html#registerPlugin-static'>.registerPlugin</a>
+          <a href='../class/Collection.html#getToolGroup-dynamic'>#getToolGroup</a>
+          <a href='../class/Collection.html#getToolNamePrefix-dynamic'>#getToolNamePrefix</a>
+          <a href='../class/Collection.html#getButtonbar-dynamic'>#getButtonbar</a>
+          <a href='../class/Collection.html#getButtons-dynamic'>#getButtons</a>
+          <a href='../class/Collection.html#getObjects-dynamic'>#getObjects</a>
+          <a href='../class/Collection.html#getInfo-dynamic'>#getInfo</a>
+          <a href='../class/Collection.html#renderContent-dynamic'>#renderContent</a>
+          <a href='../class/Collection.html#updateContent-dynamic'>#updateContent</a>
+          <a href='../class/Collection.html#updateDisplay-dynamic'>#updateDisplay</a>
+          <a href='../class/Collection.html#updateCounter-dynamic'>#updateCounter</a>
+          <a href='../class/Collection.html#removeFromDOM-dynamic'>#removeFromDOM</a>
+          <a href='../class/Collection.html#getBadge-dynamic'>#getBadge</a>
+          <a href='../class/Collection.html#getBadgeIcon-dynamic'>#getBadgeIcon</a>
+          <a href='../class/Collection.html#checkObjects-dynamic'>#checkObjects</a>
+          <a href='../class/Collection.html#selectOnLoad-dynamic'>#selectOnLoad</a>
+          <a href='../class/Collection.html#reset-dynamic'>#reset</a>
+          <a href='../class/Collection.html#getStoreData-dynamic'>#getStoreData</a>
+        </p>
+      </h2>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='icon-dynamic'>
+      #
+(void)
+<b>icon</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='enableShare-dynamic'>
+      #
+(void)
+<b>enableShare</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isSelectable-dynamic'>
+      #
+(void)
+<b>isSelectable</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderNameAsHtml-dynamic'>
+      #
+(void)
+<b>renderNameAsHtml</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='renderNameAsText-dynamic'>
+      #
+(void)
+<b>renderNameAsText</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isLeaf-dynamic'>
+      #
+(void)
+<b>isLeaf</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchFilter-dynamic'>
+      #
+(void)
+<b>getSearchFilter</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>CollectionMemory</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        CollectionMemory
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>shared&#47;Collection&#47;CollectionMemory.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../class/CollectionSelection.html'>CollectionSelection</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Direct Known Subclasses</h2>
+      <p class='children'>
+        <a href='../class/DetailHierarchyListCollection.html'>DetailHierarchyListCollection</a>
+        <a href='../class/CollectionTemporary.html'>CollectionTemporary</a>
+      </p>
+      <h2>Variables Summary</h2>
+      
+      <h3 class='inherited'>
+        Variable inherited from
+        <a href='../class/CollectionSelection.html'>CollectionSelection</a>
+      </h3>
+      <p class='inherited'>
+        <a href='../class/CollectionSelection.html#selectedClass-variable'>selectedClass</a>
+        <a href='../class/CollectionSelection.html#__selectObjectQueue-variable'>__selectObjectQueue</a>
+        <a href='../class/Collection.html#__plugins-variable'>__plugins</a>
+        <a href='../class/Collection.html#executeSearch-variable'>executeSearch</a>
+      </p>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#updateDisplay-dynamic'>
+        #
+(void)
+<b>updateDisplay</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getBadgeText-dynamic'>
+        #
+(void)
+<b>getBadgeText</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      returns a text representation of collection objects inside
+in the resolve of a promise
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#initOpts-dynamic'>
+        #
+(void)
+<b>initOpts</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasEASFields-dynamic'>
+        #
+(void)
+<b>hasEASFields</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isDownloadable-dynamic'>
+        #
+(void)
+<b>isDownloadable</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isFullscreenable-dynamic'>
+        #
+(void)
+<b>isFullscreenable</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+        <h3 class='inherited'>
+          Methods inherited from
+          <a href='../class/CollectionSelection.html'>CollectionSelection</a>
+        </h3>
+        <p class='inherited'>
+          <a href='../class/CollectionSelection.html#initOpts-dynamic'>#initOpts</a>
+          <a href='../class/CollectionSelection.html#readOpts-dynamic'>#readOpts</a>
+          <a href='../class/CollectionSelection.html#getParentCollection-dynamic'>#getParentCollection</a>
+          <a href='../class/CollectionSelection.html#copy-dynamic'>#copy</a>
+          <a href='../class/CollectionSelection.html#setCheckGeneratedRights-dynamic'>#setCheckGeneratedRights</a>
+          <a href='../class/CollectionSelection.html#getCheckGeneratedRights-dynamic'>#getCheckGeneratedRights</a>
+          <a href='../class/CollectionSelection.html#destroy-dynamic'>#destroy</a>
+          <a href='../class/CollectionSelection.html#getDescription-dynamic'>#getDescription</a>
+          <a href='../class/CollectionSelection.html#setData-dynamic'>#setData</a>
+          <a href='../class/CollectionSelection.html#showFullscreen-dynamic'>#showFullscreen</a>
+          <a href='../class/CollectionSelection.html#hasSidebar-dynamic'>#hasSidebar</a>
+          <a href='../class/CollectionSelection.html#loadInSidebar-dynamic'>#loadInSidebar</a>
+          <a href='../class/CollectionSelection.html#getCurrentTools-dynamic'>#getCurrentTools</a>
+          <a href='../class/CollectionSelection.html#getToolNamePrefix-dynamic'>#getToolNamePrefix</a>
+          <a href='../class/CollectionSelection.html#getSelectableContainer-dynamic'>#getSelectableContainer</a>
+          <a href='../class/CollectionSelection.html#isSearchable-dynamic'>#isSearchable</a>
+          <a href='../class/CollectionSelection.html#getSearchFilter-dynamic'>#getSearchFilter</a>
+          <a href='../class/CollectionSelection.html#getReadOnly-dynamic'>#getReadOnly</a>
+          <a href='../class/CollectionSelection.html#loadSidebar-dynamic'>#loadSidebar</a>
+          <a href='../class/CollectionSelection.html#getOffsetInSearch-dynamic'>#getOffsetInSearch</a>
+          <a href='../class/CollectionSelection.html#getLatestObject-dynamic'>#getLatestObject</a>
+          <a href='../class/CollectionSelection.html#__selectNextObject-dynamic'>#__selectNextObject</a>
+          <a href='../class/CollectionSelection.html#selectObject-dynamic'>#selectObject</a>
+          <a href='../class/CollectionSelection.html#__selectObject-dynamic'>#__selectObject</a>
+          <a href='../class/CollectionSelection.html#unsetSelectableContainer-dynamic'>#unsetSelectableContainer</a>
+          <a href='../class/CollectionSelection.html#setSelectableContainer-dynamic'>#setSelectableContainer</a>
+          <a href='../class/CollectionSelection.html#renderNameAsText-dynamic'>#renderNameAsText</a>
+          <a href='../class/CollectionSelection.html#icon-dynamic'>#icon</a>
+          <a href='../class/CollectionSelection.html#getHashId-dynamic'>#getHashId</a>
+          <a href='../class/CollectionSelection.html#isMovable-dynamic'>#isMovable</a>
+          <a href='../class/CollectionSelection.html#canAppend-dynamic'>#canAppend</a>
+          <a href='../class/CollectionSelection.html#getCount-dynamic'>#getCount</a>
+          <a href='../class/CollectionSelection.html#getObjects-dynamic'>#getObjects</a>
+          <a href='../class/CollectionSelection.html#getObjectsSorted-dynamic'>#getObjectsSorted</a>
+          <a href='../class/CollectionSelection.html#isSingleMode-dynamic'>#isSingleMode</a>
+          <a href='../class/CollectionSelection.html#setSingleMode-dynamic'>#setSingleMode</a>
+          <a href='../class/CollectionSelection.html#deleteObjectsFromServer-dynamic'>#deleteObjectsFromServer</a>
+          <a href='../class/CollectionSelection.html#insertObjects-dynamic'>#insertObjects</a>
+          <a href='../class/CollectionSelection.html#removeObjects-dynamic'>#removeObjects</a>
+          <a href='../class/CollectionSelection.html#objectIdx-dynamic'>#objectIdx</a>
+          <a href='../class/CollectionSelection.html#addToRequest-dynamic'>#addToRequest</a>
+          <a href='../class/CollectionSelection.html#executeSearch-dynamic'>#executeSearch</a>
+          <a href='../class/CollectionSelection.html#selectableOptsCheck-static'>.selectableOptsCheck</a>
+          <a href='../class/CollectionWithDetail.html#unregisterEvents-dynamic'>#unregisterEvents</a>
+          <a href='../class/CollectionWithDetail.html#registerEvents-dynamic'>#registerEvents</a>
+          <a href='../class/CollectionWithDetail.html#setManager-dynamic'>#setManager</a>
+          <a href='../class/CollectionWithDetail.html#isShowingInSearch-dynamic'>#isShowingInSearch</a>
+          <a href='../class/CollectionWithDetail.html#updateAfterInsertOrRemoveEvent-dynamic'>#updateAfterInsertOrRemoveEvent</a>
+          <a href='../class/CollectionWithDetail.html#getDownloadManagerClass-dynamic'>#getDownloadManagerClass</a>
+          <a href='../class/CollectionWithDetail.html#addedToListView-dynamic'>#addedToListView</a>
+          <a href='../class/CollectionWithDetail.html#makeDroppable-dynamic'>#makeDroppable</a>
+          <a href='../class/CollectionWithDetail.html#makeDetailDroppable-dynamic'>#makeDetailDroppable</a>
+          <a href='../class/CollectionWithDetail.html#initDropzone-dynamic'>#initDropzone</a>
+          <a href='../class/CollectionWithDetail.html#acceptDrop-dynamic'>#acceptDrop</a>
+          <a href='../class/CollectionWithDetail.html#takeDrop-dynamic'>#takeDrop</a>
+          <a href='../class/CollectionWithDetail.html#insertInProgress-dynamic'>#insertInProgress</a>
+          <a href='../class/CollectionWithDetail.html#select-dynamic'>#select</a>
+          <a href='../class/CollectionWithDetail.html#deselect-dynamic'>#deselect</a>
+          <a href='../class/CollectionWithDetail.html#showDetail-dynamic'>#showDetail</a>
+          <a href='../class/CollectionWithDetail.html#isFullscreenable-dynamic'>#isFullscreenable</a>
+          <a href='../class/CollectionWithDetail.html#isDownloadable-dynamic'>#isDownloadable</a>
+          <a href='../class/CollectionWithDetail.html#isExportable-dynamic'>#isExportable</a>
+          <a href='../class/CollectionWithDetail.html#isPrintable-dynamic'>#isPrintable</a>
+          <a href='../class/CollectionSearchNode.html#getManager-dynamic'>#getManager</a>
+          <a href='../class/CollectionSearchNode.html#getSelectedNodeKey-dynamic'>#getSelectedNodeKey</a>
+          <a href='../class/CollectionSearchNode.html#loadInSearchOnSelect-dynamic'>#loadInSearchOnSelect</a>
+          <a href='../class/CollectionSearchNode.html#showInSearch-dynamic'>#showInSearch</a>
+          <a href='../class/CollectionSearchNode.html#unshowInSearch-dynamic'>#unshowInSearch</a>
+          <a href='../class/CollectionSearchNode.html#getQueryElement-dynamic'>#getQueryElement</a>
+          <a href='../class/CollectionSearchNode.html#queryElementDestroyed-dynamic'>#queryElementDestroyed</a>
+          <a href='../class/CollectionSearchNode.html#isSelectable-dynamic'>#isSelectable</a>
+          <a href='../class/CollectionSearchNode.html#setSearch-dynamic'>#setSearch</a>
+          <a href='../class/CollectionSearchNode.html#getSearch-dynamic'>#getSearch</a>
+          <a href='../class/CollectionSearchNode.html#ignoreSearchManagers-dynamic'>#ignoreSearchManagers</a>
+          <a href='../class/CollectionSearchNode.html#showInSearchWithChildren-dynamic'>#showInSearchWithChildren</a>
+          <a href='../class/Collection.html#on-dynamic'>#on</a>
+          <a href='../class/Collection.html#off-dynamic'>#off</a>
+          <a href='../class/Collection.html#triggerEvent-dynamic'>#triggerEvent</a>
+          <a href='../class/Collection.html#prepareCurrentTools-dynamic'>#prepareCurrentTools</a>
+          <a href='../class/Collection.html#getData-dynamic'>#getData</a>
+          <a href='../class/Collection.html#canHaveChildren-dynamic'>#canHaveChildren</a>
+          <a href='../class/Collection.html#isCreateChildAllowed-dynamic'>#isCreateChildAllowed</a>
+          <a href='../class/Collection.html#isDeletable-dynamic'>#isDeletable</a>
+          <a href='../class/Collection.html#canUnlink-dynamic'>#canUnlink</a>
+          <a href='../class/Collection.html#selectWhenCollectionIsSelected-dynamic'>#selectWhenCollectionIsSelected</a>
+          <a href='../class/Collection.html#enableShare-dynamic'>#enableShare</a>
+          <a href='../class/Collection.html#enableSettings-dynamic'>#enableSettings</a>
+          <a href='../class/Collection.html#bigIcon-dynamic'>#bigIcon</a>
+          <a href='../class/Collection.html#getOwner-dynamic'>#getOwner</a>
+          <a href='../class/Collection.html#registerPlugin-static'>.registerPlugin</a>
+          <a href='../class/Collection.html#getToolGroup-dynamic'>#getToolGroup</a>
+          <a href='../class/Collection.html#getButtonbar-dynamic'>#getButtonbar</a>
+          <a href='../class/Collection.html#getButtons-dynamic'>#getButtons</a>
+          <a href='../class/Collection.html#getInfo-dynamic'>#getInfo</a>
+          <a href='../class/Collection.html#renderContent-dynamic'>#renderContent</a>
+          <a href='../class/Collection.html#getContent-dynamic'>#getContent</a>
+          <a href='../class/Collection.html#updateContent-dynamic'>#updateContent</a>
+          <a href='../class/Collection.html#updateDisplay-dynamic'>#updateDisplay</a>
+          <a href='../class/Collection.html#updateCounter-dynamic'>#updateCounter</a>
+          <a href='../class/Collection.html#removeFromDOM-dynamic'>#removeFromDOM</a>
+          <a href='../class/Collection.html#renderNameAsHtml-dynamic'>#renderNameAsHtml</a>
+          <a href='../class/Collection.html#getBadge-dynamic'>#getBadge</a>
+          <a href='../class/Collection.html#getBadgeIcon-dynamic'>#getBadgeIcon</a>
+          <a href='../class/Collection.html#checkObjects-dynamic'>#checkObjects</a>
+          <a href='../class/Collection.html#selectOnLoad-dynamic'>#selectOnLoad</a>
+          <a href='../class/Collection.html#reset-dynamic'>#reset</a>
+          <a href='../class/Collection.html#matchesLocator-dynamic'>#matchesLocator</a>
+          <a href='../class/Collection.html#getStoreData-dynamic'>#getStoreData</a>
+        </p>
+      </h2>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='updateDisplay-dynamic'>
+      #
+(void)
+<b>updateDisplay</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getBadgeText-dynamic'>
+      #
+(void)
+<b>getBadgeText</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>returns a text representation of
+collection objects inside
+in the resolve of a promise</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='initOpts-dynamic'>
+      #
+(void)
+<b>initOpts</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasEASFields-dynamic'>
+      #
+(void)
+<b>hasEASFields</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isDownloadable-dynamic'>
+      #
+(void)
+<b>isDownloadable</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isFullscreenable-dynamic'>
+      #
+(void)
+<b>isFullscreenable</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

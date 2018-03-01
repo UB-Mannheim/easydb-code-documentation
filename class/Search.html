@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>EasyDB Code Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>Search</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        Search
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>shared&#47;Search&#47;Search.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            CUI.Element
+          </td>
+        </tr>
+      </table>
+      <h2>Direct Known Subclasses</h2>
+      <p class='children'>
+        <a href='../class/DetailHierarchyList.html'>DetailHierarchyList</a>
+        <a href='../class/SearchCollection.html'>SearchCollection</a>
+        <a href='../class/SearchMini.html'>SearchMini</a>
+      </p>
+      <h2>Variables Summary</h2>
+      <dl class='constants'>
+  <dt id='storeDataVersion-variable'>
+    storeDataVersion
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>1</code></pre>
+    
+  </dd>
+</dl>
+      <h2>Class Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#getPhrase-static'>
+        .
+(void)
+<b>getPhrase</b><span>(str)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#findByName-static'>
+        .
+(void)
+<b>findByName</b><span>(name)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      find the search and result container by class name of the search 
+    </span>
+  </li>
+</ul>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#initOpts-dynamic'>
+        #
+(void)
+<b>initOpts</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#readOpts-dynamic'>
+        #
+(void)
+<b>readOpts</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getShareUrl-dynamic'>
+        #
+(void)
+<b>getShareUrl</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#searchButtonBeforeExecute-dynamic'>
+        #
+(void)
+<b>searchButtonBeforeExecute</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getRequestFormat-dynamic'>
+        #
+(void)
+<b>getRequestFormat</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchButtonOpts-dynamic'>
+        #
+(void)
+<b>getSearchButtonOpts</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#emptyRequest-dynamic'>
+        #
+(void)
+<b>emptyRequest</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      empties all possible filters of search managers 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchInitializedPromise-dynamic'>
+        #
+(void)
+<b>getSearchInitializedPromise</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addSearchManager-dynamic'>
+        #
+(void)
+<b>addSearchManager</b><span>(new_search_manager)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#insertAfterSearchManager-dynamic'>
+        #
+(void)
+<b>insertAfterSearchManager</b><span>(previous_search_manager, new_search_manager)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#init-dynamic'>
+        #
+(void)
+<b>init</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__initSearchManagers-dynamic'>
+        #
+(void)
+<b>__initSearchManagers</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#refresh-dynamic'>
+        #
+(void)
+<b>refresh</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getStoreData-dynamic'>
+        #
+(void)
+<b>getStoreData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addCollectionAfterSave-dynamic'>
+        #
+(void)
+<b>addCollectionAfterSave</b><span>(received_data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getStoreSearchData-dynamic'>
+        #
+(void)
+<b>getStoreSearchData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getStoreDataVersion-dynamic'>
+        #
+(void)
+<b>getStoreDataVersion</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getStoreAsUrlData-dynamic'>
+        #
+(void)
+<b>getStoreAsUrlData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addToResultDiv-dynamic'>
+        #
+(void)
+<b>addToResultDiv</b><span>(request, result_object, div)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#destroySearchManagers-dynamic'>
+        #
+(void)
+<b>destroySearchManagers</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#removeSearchManager-dynamic'>
+        #
+(void)
+<b>removeSearchManager</b><span>(sm)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#objecttypesUpdated-dynamic'>
+        #
+(void)
+<b>objecttypesUpdated</b><span>(initiator)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#canCreateSearchObjecttypes-dynamic'>
+        #
+(void)
+<b>canCreateSearchObjecttypes</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getExportObjecttypes-dynamic'>
+        #
+(void)
+<b>getExportObjecttypes</b><span>(req)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchObjecttypes-dynamic'>
+        #
+(void)
+<b>getSearchObjecttypes</b><span>(user_selected = true, filter_by_pool = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasEASFields-dynamic'>
+        #
+(void)
+<b>hasEASFields</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasSearchBasics-dynamic'>
+        #
+(void)
+<b>hasSearchBasics</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchBasics-dynamic'>
+        #
+(void)
+<b>getSearchBasics</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getLinkedObjectFields-dynamic'>
+        #
+(void)
+<b>getLinkedObjectFields</b><span>(mode, user_selected = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      return all linked fields in all objecttypes 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addToRequest-dynamic'>
+        #
+(void)
+<b>addToRequest</b><span>(request)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setRequestFormat-dynamic'>
+        #
+(void)
+<b>setRequestFormat</b><span>(request, format)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#showResult-dynamic'>
+        #
+(void)
+<b>showResult</b><span>(request, data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#disableSearchButton-dynamic'>
+        #
+(void)
+<b>disableSearchButton</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#enableSearchButton-dynamic'>
+        #
+(void)
+<b>enableSearchButton</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDownloadManagerClass-dynamic'>
+        #
+(void)
+<b>getDownloadManagerClass</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#executeAlwaysCallback-dynamic'>
+        #
+(void)
+<b>executeAlwaysCallback</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#executeWithLog-dynamic'>
+        #
+(void)
+<b>executeWithLog</b><span>(request = new Request(), pushState = false)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#execute-dynamic'>
+        #
+(void)
+<b>execute</b><span>(request = new Request())</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#isInitialized-dynamic'>
+        #
+(void)
+<b>isInitialized</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__doExecute-dynamic'>
+        #
+(void)
+<b>__doExecute</b><span>(request, master_dfr)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#__doExecuteNext-dynamic'>
+        #
+(void)
+<b>__doExecuteNext</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#executeSearch-dynamic'>
+        #
+(void)
+<b>executeSearch</b><span>(req_data)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getCurrentTools-dynamic'>
+        #
+(void)
+<b>getCurrentTools</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getLastData-dynamic'>
+        #
+(void)
+<b>getLastData</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchManagers-dynamic'>
+        #
+(void)
+<b>getSearchManagers</b><span>(filter)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#destroy-dynamic'>
+        #
+(void)
+<b>destroy</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#registerResultContainer-dynamic'>
+        #
+(void)
+<b>registerResultContainer</b><span>(__resultContainer)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getResultContainer-dynamic'>
+        #
+(void)
+<b>getResultContainer</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getSearchButton-dynamic'>
+        #
+(void)
+<b>getSearchButton</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasUserInput-dynamic'>
+        #
+(void)
+<b>hasUserInput</b><span>(request)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDefaultSort-dynamic'>
+        #
+(void)
+<b>getDefaultSort</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDefaultSortKey-dynamic'>
+        #
+(void)
+<b>getDefaultSortKey</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getEmptyResultDiv-dynamic'>
+        #
+(void)
+<b>getEmptyResultDiv</b><span>(request)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+</ul>
+      <h2>Class Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='getPhrase-static'>
+      .
+(void)
+<b>getPhrase</b><span>(str)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='findByName-static'>
+      .
+(void)
+<b>findByName</b><span>(name)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>find the search and result container by class name of the search</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='initOpts-dynamic'>
+      #
+(void)
+<b>initOpts</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='readOpts-dynamic'>
+      #
+(void)
+<b>readOpts</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getShareUrl-dynamic'>
+      #
+(void)
+<b>getShareUrl</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='searchButtonBeforeExecute-dynamic'>
+      #
+(void)
+<b>searchButtonBeforeExecute</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getRequestFormat-dynamic'>
+      #
+(void)
+<b>getRequestFormat</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchButtonOpts-dynamic'>
+      #
+(void)
+<b>getSearchButtonOpts</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='emptyRequest-dynamic'>
+      #
+(void)
+<b>emptyRequest</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>empties all possible filters of search managers</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchInitializedPromise-dynamic'>
+      #
+(void)
+<b>getSearchInitializedPromise</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addSearchManager-dynamic'>
+      #
+(void)
+<b>addSearchManager</b><span>(new_search_manager)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='insertAfterSearchManager-dynamic'>
+      #
+(void)
+<b>insertAfterSearchManager</b><span>(previous_search_manager, new_search_manager)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='init-dynamic'>
+      #
+(void)
+<b>init</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__initSearchManagers-dynamic'>
+      #
+(void)
+<b>__initSearchManagers</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='refresh-dynamic'>
+      #
+(void)
+<b>refresh</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getStoreData-dynamic'>
+      #
+(void)
+<b>getStoreData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addCollectionAfterSave-dynamic'>
+      #
+(void)
+<b>addCollectionAfterSave</b><span>(received_data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getStoreSearchData-dynamic'>
+      #
+(void)
+<b>getStoreSearchData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getStoreDataVersion-dynamic'>
+      #
+(void)
+<b>getStoreDataVersion</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getStoreAsUrlData-dynamic'>
+      #
+(void)
+<b>getStoreAsUrlData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addToResultDiv-dynamic'>
+      #
+(void)
+<b>addToResultDiv</b><span>(request, result_object, div)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='destroySearchManagers-dynamic'>
+      #
+(void)
+<b>destroySearchManagers</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='removeSearchManager-dynamic'>
+      #
+(void)
+<b>removeSearchManager</b><span>(sm)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='objecttypesUpdated-dynamic'>
+      #
+(void)
+<b>objecttypesUpdated</b><span>(initiator)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='canCreateSearchObjecttypes-dynamic'>
+      #
+(void)
+<b>canCreateSearchObjecttypes</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getExportObjecttypes-dynamic'>
+      #
+(void)
+<b>getExportObjecttypes</b><span>(req)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchObjecttypes-dynamic'>
+      #
+(void)
+<b>getSearchObjecttypes</b><span>(user_selected = true, filter_by_pool = false)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasEASFields-dynamic'>
+      #
+(void)
+<b>hasEASFields</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasSearchBasics-dynamic'>
+      #
+(void)
+<b>hasSearchBasics</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchBasics-dynamic'>
+      #
+(void)
+<b>getSearchBasics</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getLinkedObjectFields-dynamic'>
+      #
+(void)
+<b>getLinkedObjectFields</b><span>(mode, user_selected = false)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>return all linked fields in all objecttypes</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addToRequest-dynamic'>
+      #
+(void)
+<b>addToRequest</b><span>(request)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setRequestFormat-dynamic'>
+      #
+(void)
+<b>setRequestFormat</b><span>(request, format)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='showResult-dynamic'>
+      #
+(void)
+<b>showResult</b><span>(request, data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='disableSearchButton-dynamic'>
+      #
+(void)
+<b>disableSearchButton</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='enableSearchButton-dynamic'>
+      #
+(void)
+<b>enableSearchButton</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDownloadManagerClass-dynamic'>
+      #
+(void)
+<b>getDownloadManagerClass</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='executeAlwaysCallback-dynamic'>
+      #
+(void)
+<b>executeAlwaysCallback</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='executeWithLog-dynamic'>
+      #
+(void)
+<b>executeWithLog</b><span>(request = new Request(), pushState = false)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='execute-dynamic'>
+      #
+(void)
+<b>execute</b><span>(request = new Request())</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='isInitialized-dynamic'>
+      #
+(void)
+<b>isInitialized</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__doExecute-dynamic'>
+      #
+(void)
+<b>__doExecute</b><span>(request, master_dfr)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='__doExecuteNext-dynamic'>
+      #
+(void)
+<b>__doExecuteNext</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='executeSearch-dynamic'>
+      #
+(void)
+<b>executeSearch</b><span>(req_data)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getCurrentTools-dynamic'>
+      #
+(void)
+<b>getCurrentTools</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getLastData-dynamic'>
+      #
+(void)
+<b>getLastData</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchManagers-dynamic'>
+      #
+(void)
+<b>getSearchManagers</b><span>(filter)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='destroy-dynamic'>
+      #
+(void)
+<b>destroy</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='registerResultContainer-dynamic'>
+      #
+(void)
+<b>registerResultContainer</b><span>(__resultContainer)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getResultContainer-dynamic'>
+      #
+(void)
+<b>getResultContainer</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getSearchButton-dynamic'>
+      #
+(void)
+<b>getSearchButton</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasUserInput-dynamic'>
+      #
+(void)
+<b>hasUserInput</b><span>(request)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDefaultSort-dynamic'>
+      #
+(void)
+<b>getDefaultSort</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDefaultSortKey-dynamic'>
+      #
+(void)
+<b>getDefaultSortKey</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getEmptyResultDiv-dynamic'>
+      #
+(void)
+<b>getEmptyResultDiv</b><span>(request)</span>
+      <br>
+    </p>
+    
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>
